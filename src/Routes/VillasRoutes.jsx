@@ -1,9 +1,9 @@
 // src/components/Villas/VillasRoutes.jsx
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import GalleryVilla from "./GalleryVilla";
-import MapVilla from "./MapVilla";
-import BookingVilla from "./BookingVilla";
+import GalleryVilla from "../components/Villas/GalleryVilla";
+import MapVilla from "../components/Villas/MapVilla";
+import BookingVilla from "../components/Villas/BookingVilla";
 
 export default function VillasRoutes() {
   return (
