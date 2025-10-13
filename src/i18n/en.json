@@ -1,0 +1,90 @@
+{
+  "navbar": {
+    "home": "Home",
+    "villas": "Villas",
+    "doubleVillas": "Double Villas",
+    "apartments": "Apartments",
+    "commercial": "Commercial",
+    "map": "Complex Map",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "contact": "Contact Us"
+  },
+  "language": {
+    "spanish": "Spanish",
+    "english": "English"
+  },
+
+  
+  "heroHome": {
+    "badge": "Punta Cana · Coming Soon",
+    "titleLine1": "Live the Experience",
+    "titleHighlight": "of Luxury",
+    "titleLine2": "in Punta Cana",
+    "subtitle": "Trust, exclusivity, and commitment for your new home or investment",
+    "cta": "Discover More",
+    "values": {
+      "value1": "Transparency",
+      "value2": "Quality",
+      "value3": "Commitment"
+    },
+    "scroll": "Scroll"
+  },
+
+
+  "featureHome": {
+    "sectionLabel": "Our Commitment",
+    "title": "Committed to your",
+    "highlight": "Future",
+    "features": {
+      "trust": {
+        "title": "Total Trust",
+        "description": "Transparency in every project"
+      },
+      "team": {
+        "title": "Professional Team",
+        "description": "Experts dedicated to your goals"
+      },
+      "facilities": {
+        "title": "Premium Facilities",
+        "description": "Luxury and comfort in every detail"
+      },
+      "exclusive": {
+        "title": "Exclusive Properties",
+        "description": "New and renovated"
+      },
+      "payments": {
+        "title": "Flexible Payments",
+        "description": "Options tailored to you"
+      },
+      "service": {
+        "title": "Personalized Attention",
+        "description": "Constant guidance and support"
+      }
+    },
+    "cta": "Schedule your visit"
+  },
+
+
+  "galleryHome": {
+  "section1": {
+    "title": "Where the Sea Meets Luxury",
+    "text": "Wake up every morning to the sound of waves and an unparalleled Caribbean view. Our properties are designed for those seeking the perfect balance between nature, exclusivity, and comfort.",
+    "button": "Explore Properties"
+  },
+  "section2": {
+    "title": "Spaces that Inspire Wellbeing",
+    "text": "Enjoy areas designed for your rest and entertainment. Infinity pools, tropical gardens, and panoramic terraces that connect you with the essence of Punta Cana.",
+    "button": "Learn More"
+  },
+  "section3": {
+    "title": "Modern Design, Timeless Details",
+    "text": "Each space has been crafted to reflect sophistication and functionality. Spacious interiors, natural light, and premium materials combine to create the home you deserve.",
+    "button": "View Gallery"
+  }
+}
+
+}

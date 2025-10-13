@@ -1,0 +1,86 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "villas": "Villas",
+    "doubleVillas": "Villas Dobles",
+    "apartments": "Apartamentos",
+    "commercial": "Comercios",
+    "map": "Mapa General",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "contact": "Contáctanos"
+  },
+  "language": {
+    "spanish": "Español",
+    "english": "Inglés"
+  },
+  "heroHome": {
+    "badge": "Punta Cana · Próxima Inauguración",
+    "titleLine1": "Vive la Experiencia",
+    "titleHighlight": "de Lujo",
+    "titleLine2": "en Punta Cana",
+    "subtitle": "Confianza, exclusividad y compromiso para tu nuevo hogar o inversión",
+    "cta": "Descubre Más",
+    "values": {
+      "value1": "Transparencia",
+      "value2": "Calidad",
+      "value3": "Compromiso"
+    },
+    "scroll": "Desliza"
+  },
+  "featureHome": {
+    "sectionLabel": "Nuestro Compromiso",
+    "title": "Comprometidos con tu",
+    "highlight": "Futuro",
+    "features": {
+      "trust": {
+        "title": "Confianza Total",
+        "description": "Transparencia en cada proyecto"
+      },
+      "team": {
+        "title": "Equipo Profesional",
+        "description": "Expertos dedicados a tus metas"
+      },
+      "facilities": {
+        "title": "Instalaciones Premium",
+        "description": "Lujo y confort en cada detalle"
+      },
+      "exclusive": {
+        "title": "Propiedades Exclusivas",
+        "description": "Nuevas y remodeladas"
+      },
+      "payments": {
+        "title": "Pagos Flexibles",
+        "description": "Opciones adaptadas a ti"
+      },
+      "service": {
+        "title": "Atención Personalizada",
+        "description": "Acompañamiento constante"
+      }
+    },
+    "cta": "Agenda tu visita"
+  }, 
+  "galleryHome": {
+  "section1": {
+    "title": "Donde el Mar se Encuentra con el Lujo",
+    "text": "Despierta cada mañana con el sonido de las olas y una vista incomparable del Caribe. Nuestras propiedades están diseñadas para quienes buscan un equilibrio perfecto entre naturaleza, exclusividad y confort.",
+    "button": "Explorar Propiedades"
+  },
+  "section2": {
+    "title": "Espacios que Inspiran Bienestar",
+    "text": "Disfruta de áreas diseñadas para tu descanso y entretenimiento. Piscinas infinitas, jardines tropicales y terrazas panorámicas que te conectan con la esencia de Punta Cana.",
+    "button": "Conocer Más"
+  },
+  "section3": {
+    "title": "Diseño Moderno, Detalles Atemporales",
+    "text": "Cada espacio ha sido pensado para reflejar sofisticación y funcionalidad. Interiores amplios, luz natural y materiales premium se combinan para crear el hogar que mereces.",
+    "button": "Ver Galería"
+  }
+}
+
+
+  
+}
