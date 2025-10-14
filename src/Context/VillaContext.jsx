@@ -28,9 +28,9 @@ export function VillaProvider({ children }) {
     {
       id: 2,
       name: "Villa Spring",
-      price: 420000,
+      price: 520000,
       area: "210m²",
-      description: "Villa rodeada de palmeras y tranquilidad.",
+      description: "Villa con piscina y vistas al mar.",
       image: villa4,
       coordinates: { x: 20, y: 40 },
     },

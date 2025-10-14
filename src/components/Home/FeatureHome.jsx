@@ -51,12 +51,12 @@ export default function FeatureHome() {
 
         {/* CTA */}
         <div className="mt-20 sm:mt-24 text-center">
-          <button className="group inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-10 py-3 sm:py-4 border border-slate-200 text-slate-900 text-xs sm:text-sm font-medium tracking-wide hover:border-teal-600/30 hover:bg-teal-50/30 transition-all duration-500 rounded-full">
+          {/* <button className="group inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-10 py-3 sm:py-4 border border-slate-200 text-slate-900 text-xs sm:text-sm font-medium tracking-wide hover:border-teal-600/30 hover:bg-teal-50/30 transition-all duration-500 rounded-full">
             <span>{t("featureHome.cta")}</span>
             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

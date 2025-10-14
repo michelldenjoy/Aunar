@@ -1,1 +1,101 @@
 @import "tailwindcss";
+
+@theme {
+  /* ===== TURQUESAS CARIBEÑOS ===== */
+  --color-caribbean-50: #f0fdfa;
+  --color-caribbean-100: #e6faf7;
+  --color-caribbean-200: #ccf5ef;
+  --color-caribbean-300: #99ebe0;
+  --color-caribbean-400: #5dd9c8;
+  --color-caribbean-500: #3bc9b5;
+  --color-caribbean-600: #2ba89a;
+  --color-caribbean-700: #238073;
+  --color-caribbean-800: #1d6660;
+  --color-caribbean-900: #19524d;
+
+  /* ===== ARENAS (más variedad, incluyendo tonos medios y oscuros) ===== */
+  --color-sand-50: #fdfdfb;    /* Arena casi blanca */
+  --color-sand-100: #faf9f6;   /* Arena muy suave */
+  --color-sand-200: #f5f3ee;   /* Arena clara */
+  --color-sand-300: #ede9e0;   /* Arena visible */
+  --color-sand-400: #dfd9cc;   /* Arena dorada suave */
+  --color-sand-500: #d4cab8;   /* Arena dorada media */
+  --color-sand-600: #c4b5a0;   /* Arena tostada */
+  --color-sand-700: #a89781;   /* Arena oscura */
+  --color-sand-800: #8b7a65;   /* Arena profunda */
+  --color-sand-900: #6d5f4d;   /* Arena muy oscura */
+
+  /* ===== CORAL (perfecto para CTAs y acentos) ===== */
+  --color-coral-50: #fff5f3;
+  --color-coral-100: #ffe8e3;
+  --color-coral-200: #ffd5cc;
+  --color-coral-300: #ffb8a8;
+  --color-coral-400: #ff9174;
+  --color-coral-500: #ff6b47;   /* Coral vibrante principal */
+  --color-coral-600: #f04e2a;
+  --color-coral-700: #cc3b1c;
+  --color-coral-800: #a8331a;
+  --color-coral-900: #8a2f1c;
+
+  /* ===== OCÉANO PROFUNDO (azules marinos elegantes) ===== */
+  --color-ocean-50: #f0f7ff;
+  --color-ocean-100: #e0effe;
+  --color-ocean-200: #bae0fd;
+  --color-ocean-300: #7cc8fb;
+  --color-ocean-400: #36adf7;
+  --color-ocean-500: #0c8ce9;
+  --color-ocean-600: #006dc7;
+  --color-ocean-700: #0156a1;
+  --color-ocean-800: #064985;   /* Azul marino medio */
+  --color-ocean-900: #0b3d6e;   /* Azul marino profundo */
+
+  /* ===== VERDE PALMERA (verdes tropicales) ===== */
+  --color-palm-50: #f3faf3;
+  --color-palm-100: #e3f5e3;
+  --color-palm-200: #c7eac7;
+  --color-palm-300: #9dd99d;
+  --color-palm-400: #6bc06b;
+  --color-palm-500: #47a347;   /* Verde palmera principal */
+  --color-palm-600: #368636;
+  --color-palm-700: #2d6b2d;
+  --color-palm-800: #275527;
+  --color-palm-900: #224622;
+
+  /* ===== SOL (amarillos cálidos del caribe) ===== */
+  --color-sun-50: #fffef0;
+  --color-sun-100: #fffbdb;
+  --color-sun-200: #fff5b8;
+  --color-sun-300: #ffeb8a;
+  --color-sun-400: #ffd94f;
+  --color-sun-500: #ffc224;   /* Amarillo sol principal */
+  --color-sun-600: #f59e0b;
+  --color-sun-700: #d97706;
+  --color-sun-800: #b45309;
+  --color-sun-900: #92400e;
+
+  /* ===== NEUTROS (grises cálidos caribeños) ===== */
+  --color-neutral-50: #fafaf9;
+  --color-neutral-100: #f5f5f4;
+  --color-neutral-200: #e7e5e4;
+  --color-neutral-300: #d6d3d1;
+  --color-neutral-400: #a8a29e;
+  --color-neutral-500: #78716c;   /* Gris cálido principal */
+  --color-neutral-600: #57534e;
+  --color-neutral-700: #44403c;
+  --color-neutral-800: #292524;
+  --color-neutral-900: #1c1917;
+
+  /* ===== COLORES ELEGANTES (mantén estos) ===== */
+  --color-elegant-navy: #2c3e50;
+  --color-elegant-slate: #475569;
+  --color-elegant-warm: #78716c;
+  --color-elegant-light: #f8fafc;
+
+  /* Fuentes */
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+
+  /* Letter spacing */
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.3em;
+}
