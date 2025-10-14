@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Apartments from './pages/Apartments';
-import DoubleVillas from './pages/DoubleVillas';
+import DoubleVillasPage from './pages/DoubleVillasPage';
 import Commercial from './pages/Commercial';
 import About from './pages/About';
 import Map from './pages/Map';
@@ -19,7 +19,7 @@ const App = () => {
         <Route>
           <Route path="/" element={<Home />} />
           <Route path="/villas/*" element={<VillasPage />} />
-          <Route path="/double-villas" element={<DoubleVillas />} />
+          <Route path="/double-villas/*" element={<DoubleVillasPage />} />
           <Route path="/apartments" element={<Apartments />} />
           <Route path="/commercial" element={<Commercial />} />
           <Route path="/map" element={<Map />} />

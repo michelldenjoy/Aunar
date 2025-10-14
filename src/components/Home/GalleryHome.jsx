@@ -52,7 +52,7 @@ export default function GalleryHome() {
 
   const amenities = [
     "Piscina Infinita",
-    "Jardín Tropical",
+    "Areas Verdes",
     "Área Infantil",
     "Estudio de Yoga",
     "Gimnasio Premium",
@@ -62,7 +62,7 @@ export default function GalleryHome() {
     "Restaurante & Café",
     "Seguridad 24/7",
     "Sala de Juegos",
-    "Estudio de Arte"
+    "Pistas de Pádel"
   ];
 
   const locations = [
@@ -168,7 +168,7 @@ export default function GalleryHome() {
                 Un Santuario Moderno en el Corazón del Paraíso
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Caribbean Luxury Residences fusiona el lujo con el estilo de vida, ofreciendo una vibrante comunidad residencial con diseños inteligentes, arquitectura elevada y amenidades tipo resort para quienes valoran el estilo, espacio y conectividad perfecta.
+                Aunar Luxury Residences fusiona el lujo con el estilo de vida, ofreciendo una vibrante comunidad residencial con diseños inteligentes, arquitectura elevada y amenidades tipo resort para quienes valoran el estilo, espacio y conectividad perfecta.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
                 Rodeado de paisajes tropicales y posicionado a minutos de los destinos más icónicos, este desarrollo redefine lo que significa llegar a casa.
@@ -232,7 +232,7 @@ export default function GalleryHome() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-light text-slate-900 mb-6">
-              Ocio Diario a Tu Puerta
+              Ventajas para nuestros socios
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Te invitamos a relajarte, recargarte y reconectar a través de amenidades cuidadosamente seleccionadas. Desde zonas de bienestar hasta espacios creativos, diseñado para todos los gustos y edades.

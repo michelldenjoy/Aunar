@@ -8,7 +8,6 @@ import BookingVilla from "../components/Villas/BookingVilla";
 export default function VillasRoutes() {
   return (
     <Routes>
-      {/* Redirige /villas a /villas/imagenes */}
       <Route path="/" element={<Navigate to="imagenes" replace />} />
       <Route path="imagenes" element={<GalleryVilla />} />
       <Route path="plano" element={<MapVilla />} />

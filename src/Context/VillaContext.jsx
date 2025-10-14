@@ -26,7 +26,7 @@ export function VillaProvider({ children }) {
       coordinates: { x: 60, y: 40 },
     },
     {
-      id: 2,
+      id: 3,
       name: "Villa Spring",
       price: 520000,
       area: "210m²",
