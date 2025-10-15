@@ -2,7 +2,7 @@
 import React from "react";
 import HeaderApartment from "../components/Apartaments/HeaderApart";
 import ApartmentsRoutes from "../Routes/ApartmentsRoutes";
-import { ApartmentProvider } from "../Context/ApartmentsContext";
+import { ApartmentProvider } from "../Context/ApartmentContext";
 
 export default function ApartmentsPage() {
   return (
