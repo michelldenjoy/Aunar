@@ -1,7 +1,7 @@
 // src/App.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Apartments from './pages/Apartments';
+import ApartmentsPage from './pages/ApartmentsPage';
 import DoubleVillasPage from './pages/DoubleVillasPage';
 import Commercial from './pages/Commercial';
 import About from './pages/About';
@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/villas/*" element={<VillasPage />} />
           <Route path="/double-villas/*" element={<DoubleVillasPage />} />
-          <Route path="/apartments" element={<Apartments />} />
+          <Route path="/apartments/*" element={<ApartmentsPage />} />
           <Route path="/commercial" element={<Commercial />} />
           <Route path="/map" element={<Map />} />
           <Route path="/about" element={<About />} />

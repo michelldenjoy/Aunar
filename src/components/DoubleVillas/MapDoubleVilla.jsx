@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDoubleVilla } from "../../hooks/useDoubleVilla";
 import Modal from "../common /Modal";
 import { useNavigate } from "react-router-dom";
-import { Lock } from "lucide-react"; // icono bonito y ligero
+import { Lock } from "lucide-react";
 
 export default function MapDoubleVilla() {
   const { doubleVillas, setSelectedDoubleVilla } = useDoubleVilla();
@@ -58,8 +58,7 @@ export default function MapDoubleVilla() {
                   <div className="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center">
                     <Lock className="text-white w-5 h-5" />
                   </div>
-                  {/* Tooltip */}
-                  <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs bg-red-600 text-white px-2 py-0.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition">
+                  <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs bg-red-600 text-white px-2 py-0.5 rounded-full shadow-md opacity-100 transition">
                     Reservada
                   </span>
                 </>
@@ -97,10 +96,10 @@ export default function MapDoubleVilla() {
                 <strong>Área:</strong> {activeVilla.area}
               </p>
               <p className="text-slate-700">
-                <strong>Precio:</strong> $
-                {activeVilla.price.toLocaleString()}
+                <strong>Precio:</strong> ${activeVilla.price.toLocaleString()}
               </p>
 
+              {/* Mostrar aviso si está reservada */}
               {activeVilla.status === "reserved" && (
                 <p className="mt-4 text-red-600 font-semibold">
                   ⚠️ Esta propiedad ya está reservada.
@@ -131,15 +130,3 @@ export default function MapDoubleVilla() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-

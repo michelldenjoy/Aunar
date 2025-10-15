@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { useVilla } from "../../hooks/useVilla";
 import Modal from "../common /Modal";
 import { useNavigate } from "react-router-dom";
-import { Lock } from "lucide-react"; // ícono ligero y elegante
+import { Lock } from "lucide-react"; 
+
 
 export default function MapVilla() {
   const { villas, setSelectedVilla } = useVilla();
@@ -58,7 +59,7 @@ export default function MapVilla() {
                   <div className="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center">
                     <Lock className="text-white w-5 h-5" />
                   </div>
-                  <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs bg-red-600 text-white px-2 py-0.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition">
+                  <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs bg-red-600 text-white px-2 py-0.5 rounded-full shadow-md opacity-100 transition">
                     Reservada
                   </span>
                 </>
