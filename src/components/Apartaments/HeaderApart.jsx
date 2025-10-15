@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import apartmentHeader from "../../assets/apartmentheader.mp4"; // 🎥 coloca aquí tu video real
+import apartmentHeader from "../../assets/apartmentheader2.mp4"; 
 
 export default function HeaderApartment() {
   const navigate = useNavigate();
