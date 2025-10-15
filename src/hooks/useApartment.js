@@ -1,6 +1,6 @@
 // src/hooks/useApartment.js
 import { useContext } from "react";
-import { ApartmentContext } from "../context/ApartmentContext";
+import { ApartmentContext } from "../Context/ApartmentContext";
 
 export function useApartment() {
   const ctx = useContext(ApartmentContext);

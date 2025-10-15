@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DoubleVillaContext } from "../context/DoubleVillaContext";
+import { DoubleVillaContext } from "../Context/DoubleVillaContext";
 
 export function useDoubleVilla() {
   const ctx = useContext(DoubleVillaContext);
