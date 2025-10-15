@@ -17,6 +17,8 @@
     "spanish": "Español",
     "english": "Inglés"
   },
+
+
   "heroHome": {
     "badge": "Punta Cana · Próxima Inauguración",
     "titleLine1": "Vive la Experiencia",
@@ -31,6 +33,8 @@
     },
     "scroll": "Desliza"
   },
+
+
   "featureHome": {
     "sectionLabel": "Nuestro Compromiso",
     "title": "Comprometidos con tu",
@@ -63,6 +67,8 @@
     },
     "cta": "Agenda tu visita"
   }, 
+
+
   "galleryHome": {
   "section1": {
     "title": "Donde el Mar se Encuentra con el Lujo",
@@ -80,7 +86,4 @@
     "button": "Ver Galería"
   }
 }
-
-
-  
 }

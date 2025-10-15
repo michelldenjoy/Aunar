@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Shield, Users, Home, Sparkles, CreditCard, Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import marblefondo from "../../assets/fondosand1.jpg";
 
 export default function FeatureHome() {
   const { t } = useTranslation();
@@ -87,12 +88,12 @@ export default function FeatureHome() {
   };
 
   return (
-    <section className="relative py-16 md:py-24 bg-gradient-to-b from-sand-50 via-white to-sand-50">
+    <section className="relative py-10 md:py-14 bg-gradient-to-b from-sand-50 via-white to-sand-50">
       {/* Textura de fondo sutil */}
       <div
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 bg-cover bg-center opacity-[0.2]"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url(${marblefondo})`,
         }}
       />
 
@@ -102,7 +103,7 @@ export default function FeatureHome() {
 
       <div className="max-w-7xl mx-auto px-6 relative">
         {/* Header más personal y cálido */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-16 md:mb-10">
           <div className="inline-block mb-6">
             <div className="flex items-center gap-3 px-5 py-2 bg-white border border-sand-300 rounded-full shadow-sm">
               <div className="w-2 h-2 rounded-full bg-caribbean-400 animate-pulse" />
@@ -120,7 +121,7 @@ export default function FeatureHome() {
             {t("featureHome.title")}
           </h2>
 
-          <p className="text-lg md:text-xl text-caribbean-700 font-light italic max-w-2xl mx-auto">
+          <p className="text-3xl md:text-5xl text-caribbean-700 font-light italic max-w-2xl mx-auto">
             {t("featureHome.highlight")}
           </p>
 
@@ -161,7 +162,7 @@ export default function FeatureHome() {
                   }
                 `}
                 >
-                  {/* Sutil gradiente de fondo */}
+                  {/* Sombreado de fondo con hover */}
                   <div
                     className={`
                     absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300
@@ -201,10 +202,10 @@ export default function FeatureHome() {
                       </div>
                     </div>
 
-                    {/* Título con tipografía más personal */}
+                    {/* TITULO DE CARDS */}
                     <h3
                       className={`
-                      text-xl md:text-2xl font-medium mb-3 transition-colors duration-300
+                      text-xl md:text-2xl font-medium mb-2 transition-colors duration-300
                       ${isHovered ? colors.dark : "text-neutral-900"}
                     `}
                     >
