@@ -21,9 +21,18 @@ export function DoubleVillaProvider({ children }) {
       name: "Double Villa Garden",
       price: 465000,
       area: "250m²",
-      description: "Villa doble con jardín tropical, balcones y acabados de lujo.",
+      description: "Villa doble con jardín tropical, en zona privilegiada con balcones y acabados de lujo.",
       image: double2,
       coordinates: { x: 65, y: 45 },
+    },
+    {
+      id: 3,
+      name: "Double Villa Sunset",
+      price: 545000,
+      area: "300m²",
+      description: "Villa doble con piscina infinita, jardin, diseño arquitectónico singular, materiales y acabados de alta gama.",
+      image: double2,
+      coordinates: { x: 20, y: 25 },
     },
   ]);
 

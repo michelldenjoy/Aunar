@@ -1,4 +1,3 @@
-// src/components/DoubleVillas/BookingDoubleVilla.jsx
 import React from "react";
 import { useDoubleVilla } from "../../hooks/useDoubleVilla";
 
@@ -8,7 +7,7 @@ export default function BookingDoubleVilla() {
   if (!selectedDoubleVilla) {
     return (
       <div className="text-center py-20">
-        <p className="text-slate-600">No has seleccionado ninguna villa.</p>
+        <p className="text-slate-600">No has seleccionado ninguna Villa Doble.</p>
       </div>
     );
   }
