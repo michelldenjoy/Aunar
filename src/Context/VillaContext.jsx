@@ -15,6 +15,7 @@ export function VillaProvider({ children }) {
       description: "Villa moderna con piscina y vistas al mar.",
       image: villa2,
       coordinates: { x: 40, y: 60 },
+      status: "available",
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ export function VillaProvider({ children }) {
       description: "Villa rodeada de palmeras y tranquilidad.",
       image: villa3,
       coordinates: { x: 60, y: 40 },
+      status: "reserved",
     },
     {
       id: 3,
@@ -33,6 +35,7 @@ export function VillaProvider({ children }) {
       description: "Villa con piscina y vistas al mar.",
       image: villa4,
       coordinates: { x: 20, y: 40 },
+      status: "available",
     },
   ]);
 
