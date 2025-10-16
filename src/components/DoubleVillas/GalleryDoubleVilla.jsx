@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import doubleFront from "../../assets/doublefront.jpg";
-import doubleInterior from "../../assets/doubleinterior.jpg";
-import doubleTerrace from "../../assets/doubleterrace.jpg";
-import doubleGarden from "../../assets/doublegarden.jpg";
+import doubleFront from "../../assets/doubleFront.jpg";
+import doubleInterior from "../../assets/doubleInterior.jpg";
+import doubleTerrace from "../../assets/doubleTerrace.jpg";
+import doubleGarden from "../../assets/doubleGarden.jpg";
 
 export default function GalleryDoubleVilla() {
   const images = [
