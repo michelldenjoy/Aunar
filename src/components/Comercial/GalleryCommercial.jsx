@@ -41,7 +41,6 @@ export default function GalleryCommercial() {
   return (
     <section className="py-20 bg-gradient-to-b from-white via-slate-50 to-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        {/* 🏢 Título */}
         <motion.h2
           variants={fadeUp}
           initial="hidden"

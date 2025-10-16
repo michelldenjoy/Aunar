@@ -20,65 +20,63 @@ export default function Navbar() {
     { path: "/contact", label: t("navbar.contact") },
   ];
 
-  // Detectar scroll para cambiar estilo del navbar
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Cerrar menú móvil al cambiar de ruta
-  useEffect(() => {
-    setOpen(false);
-  }, [location.pathname]);
+  useEffect(() => setOpen(false), [location.pathname]);
 
-  // Cerrar con Escape
   useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === "Escape" && open) setOpen(false);
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.body.style.overflowX = "hidden"; // 🔧 evitar scroll lateral
+    } else {
+      document.body.style.overflow = "unset";
+      document.body.style.overflowX = "hidden"; // mantener fijo
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+      document.body.style.overflowX = "hidden";
     };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
   return (
     <nav
       role="navigation"
       aria-label="Main navigation"
-      className={`w-full fixed top-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-100" 
+      className={`w-full fixed top-0 left-0 right-0 z-50 overflow-x-hidden transition-all duration-500 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-100"
           : "bg-white/70 backdrop-blur-md"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        
-        {/* Logo elegante */}
+      <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-3 sm:py-4 flex items-center justify-between overflow-x-hidden">
+        {/* Logo */}
         <Link
           to="/"
-          className="relative group"
+          className="relative group z-50 flex-shrink-0"
           onClick={() => setOpen(false)}
         >
           <div className="flex flex-col items-start">
-            <span className="text-2xl font-light tracking-[0.2em] text-slate-900 transition-colors">
+            <span className="text-lg sm:text-xl font-light tracking-[0.15em] sm:tracking-[0.2em] text-slate-900 transition-colors">
               AUNAR
             </span>
-            <span className="text-[10px] tracking-[0.3em] uppercase text-teal-600/60 font-medium -mt-1">
+            <span className="text-[7px] sm:text-[9px] tracking-[0.25em] uppercase text-teal-600/60 font-medium -mt-0.5 sm:-mt-1">
               Punta Cana
             </span>
           </div>
         </Link>
 
-        {/* Desktop links - minimalistas */}
-        <ul className="hidden lg:flex items-center gap-8">
+        {/* Desktop links */}
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-8">
           {links.map((link) => (
             <li key={link.path}>
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-xs font-medium tracking-wider uppercase transition-all duration-300 relative group ${
+                  `text-[10px] xl:text-xs font-medium tracking-wider uppercase transition-all duration-300 relative group ${
                     isActive
                       ? "text-teal-600"
                       : "text-slate-600 hover:text-slate-900"
@@ -86,22 +84,19 @@ export default function Navbar() {
                 }
               >
                 {link.label}
-                {/* Underline elegante */}
-                <span className={`absolute -bottom-1 left-0 h-[1px] bg-teal-600 transition-all duration-300 ${
-                  ({ isActive }) => isActive ? "w-full" : "w-0 group-hover:w-full"
-                }`} />
+                <span className="absolute -bottom-1 left-0 h-[1px] bg-teal-600 transition-all duration-300 w-0 group-hover:w-full" />
               </NavLink>
             </li>
           ))}
         </ul>
 
-        {/* Right side: language & mobile toggle */}
-        <div className="flex items-center gap-6">
+        {/* Right side */}
+        <div className="flex items-center gap-3 sm:gap-4 z-50">
           <div className="hidden lg:block">
             <LanguageSwitcher />
           </div>
 
-          {/* Mobile toggle minimalista */}
+          {/* Mobile toggle */}
           <button
             aria-controls="mobile-menu"
             aria-expanded={open}
@@ -109,23 +104,43 @@ export default function Navbar() {
             onClick={() => setOpen((s) => !s)}
             className="lg:hidden flex flex-col gap-1.5 p-2 group"
           >
-            <span className={`w-6 h-[1.5px] bg-slate-700 transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`w-6 h-[1.5px] bg-slate-700 transition-all duration-300 ${open ? "opacity-0" : ""}`} />
-            <span className={`w-6 h-[1.5px] bg-slate-700 transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span
+              className={`w-5 sm:w-6 h-[1.5px] bg-slate-700 transition-all duration-300 ${
+                open ? "rotate-45 translate-y-2" : ""
+              }`}
+            />
+            <span
+              className={`w-5 sm:w-6 h-[1.5px] bg-slate-700 transition-all duration-300 ${
+                open ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`w-5 sm:w-6 h-[1.5px] bg-slate-700 transition-all duration-300 ${
+                open ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            />
           </button>
         </div>
       </div>
 
-      {/* Mobile menu elegante */}
+      {/* Overlay móvil */}
+      {open && (
+        <div
+          className="lg:hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+          onClick={() => setOpen(false)}
+        />
+      )}
+
+      {/* Menú móvil */}
       <div
         id="mobile-menu"
-        className={`lg:hidden transition-all duration-500 ease-out ${
-          open 
-            ? "max-h-screen opacity-100" 
-            : "max-h-0 opacity-0 overflow-hidden"
-        } bg-white border-t border-slate-100`}
+        className={`lg:hidden fixed left-0 top-[64px] w-full transition-all duration-500 ease-out z-50 ${
+          open
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0 pointer-events-none"
+        } bg-white shadow-xl max-h-[calc(100vh-64px)] overflow-y-auto`}
       >
-        <div className="px-6 py-8 space-y-1">
+        <div className="px-4 sm:px-6 py-6 sm:py-8 space-y-1">
           {links.map((link, index) => (
             <NavLink
               key={link.path}
@@ -133,7 +148,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               style={{ animationDelay: `${index * 50}ms` }}
               className={({ isActive }) =>
-                `block px-4 py-3 text-sm font-medium tracking-wide uppercase transition-all duration-300 ${
+                `block px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium tracking-wide uppercase transition-all duration-300 rounded-lg ${
                   isActive
                     ? "text-teal-600 bg-teal-50/50 border-l-2 border-teal-600"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-l-2 border-transparent"
@@ -144,21 +159,19 @@ export default function Navbar() {
             </NavLink>
           ))}
 
-          {/* Divisor */}
-          <div className="flex items-center gap-2 py-6">
+          <div className="flex items-center gap-2 py-4 sm:py-6">
             <div className="flex-1 h-[1px] bg-slate-200" />
             <div className="w-1 h-1 bg-teal-600/30 rounded-full" />
             <div className="flex-1 h-[1px] bg-slate-200" />
           </div>
 
-          {/* Language switcher */}
           <div className="flex justify-center pt-2">
             <LanguageSwitcher />
           </div>
         </div>
       </div>
 
-      {/* CSS para animación */}
+      {/* Animación */}
       <style jsx>{`
         @keyframes fadeIn {
           from {
