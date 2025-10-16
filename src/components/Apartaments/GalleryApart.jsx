@@ -1,5 +1,5 @@
-// src/components/Apartments/GalleryApartment.jsx
 import React from "react";
+import { motion } from "framer-motion";
 import apartment1 from "../../assets/apartment1.jpg";
 import apartment2 from "../../assets/apartment2.jpg";
 import apartment3 from "../../assets/apartment3.jpg";
@@ -33,22 +33,45 @@ export default function GalleryApartment() {
     },
   ];
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-b from-white via-slate-50 to-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl md:text-5xl font-light text-slate-900 mb-6">
-          Galería de Apartamentos
-        </h2>
-        <p className="text-slate-600 max-w-2xl mx-auto mb-12">
-          Explora los espacios, la arquitectura y la elegancia de nuestros
-          apartamentos diseñados para el confort y el estilo de vida moderno.
-        </p>
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-5xl font-light text-slate-900 mb-6"
+        >
+          Apartamentos del Complejo AUNAR
+        </motion.h2>
+
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="text-slate-600 max-w-2xl mx-auto mb-12"
+        >
+          Descubre los apartamentos diseñados para ofrecer una experiencia de
+          vida moderna, cómoda y rodeada de bienestar.
+        </motion.p>
 
         {/* 🏙️ Grid de imágenes */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images.map((img) => (
-            <div
+          {images.map((img, i) => (
+            <motion.div
               key={img.id}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.2, duration: 0.8 }}
               className="relative overflow-hidden rounded-3xl shadow-lg group"
             >
               <img
@@ -56,13 +79,13 @@ export default function GalleryApartment() {
                 alt={img.title}
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
                 <h3 className="text-white text-xl font-semibold">
                   {img.title}
                 </h3>
                 <p className="text-white/90 text-sm mt-2">{img.desc}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
