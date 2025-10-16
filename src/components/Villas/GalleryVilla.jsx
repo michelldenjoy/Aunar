@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import villaExterior from "../../assets/Villa1.jpg";
+import villaExterior from "../../assets/villa1.jpg";
 import villaInterior from "../../assets/Villa2.jpg";
 import villaPool from "../../assets/Villa3.jpg";
 import villaLiving from "../../assets/Villa4.jpg";
