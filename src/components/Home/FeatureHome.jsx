@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Shield, Users, Home, Sparkles, CreditCard, Heart } from "lucide-react";
+import {
+  Shield,
+  Users,
+  Home,
+  Sparkles,
+  CreditCard,
+  Heart,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 import marblefondo from "../../assets/fondosand1.jpg";
 
@@ -88,26 +95,25 @@ export default function FeatureHome() {
   };
 
   return (
-    <section className="relative py-10 md:py-14 bg-gradient-to-b from-sand-50 via-white to-sand-50">
-      {/* Textura de fondo sutil */}
+    <section className="relative py-14 sm:py-16 md:py-20 bg-gradient-to-b from-sand-50 via-white to-sand-50 overflow-hidden">
+      {/* Fondo marmolado */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-[0.2]"
-        style={{
-          backgroundImage: `url(${marblefondo})`,
-        }}
+        className="absolute inset-0 bg-cover bg-center opacity-[0.15]"
+        style={{ backgroundImage: `url(${marblefondo})` }}
       />
 
-      {/* Dos Puntos parpadean sutilmente */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-caribbean-200/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-32 left-10 w-96 h-96 bg-coral-200/15 rounded-full blur-3xl" />
+      {/* Luces suaves de fondo */}
+      <div className="absolute top-24 right-0 w-64 sm:w-80 h-64 sm:h-80 bg-caribbean-200/25 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-coral-200/20 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-6 relative">
-        {/* Header más personal y cálido */}
-        <div className="text-center mb-16 md:mb-10">
+      {/* Contenedor principal */}
+      <div className="relative max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8">
+        {/* Cabecera */}
+        <div className="text-center mb-12 sm:mb-14 md:mb-16">
           <div className="inline-block mb-6">
-            <div className="flex items-center gap-3 px-5 py-2 bg-white border border-sand-300 rounded-full shadow-sm">
+            <div className="flex items-center gap-3 px-4 sm:px-5 py-2 bg-white border border-sand-300 rounded-full shadow-sm">
               <div className="w-2 h-2 rounded-full bg-caribbean-400 animate-pulse" />
-              <span className="text-xs font-medium tracking-widest uppercase text-neutral-600">
+              <span className="text-[10px] sm:text-xs font-medium tracking-widest uppercase text-neutral-600">
                 {t("featureHome.sectionLabel")}
               </span>
               <div
@@ -117,24 +123,23 @@ export default function FeatureHome() {
             </div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-neutral-900 mb-5 leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-neutral-900 mb-3 sm:mb-5 leading-tight">
             {t("featureHome.title")}
           </h2>
 
-          <p className="text-3xl md:text-5xl text-caribbean-700 font-light italic max-w-2xl mx-auto">
+          <p className="text-xl sm:text-2xl md:text-4xl text-caribbean-700 font-light italic max-w-2xl mx-auto px-2">
             {t("featureHome.highlight")}
           </p>
 
-          {/* Línea decorativa orgánica */}
-          <div className="mt-8 flex items-center justify-center gap-2">
-            <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-caribbean-400 to-transparent" />
+          <div className="mt-6 sm:mt-8 flex items-center justify-center gap-2">
+            <div className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent via-caribbean-400 to-transparent" />
             <div className="w-1.5 h-1.5 rounded-full bg-caribbean-400" />
-            <div className="w-8 h-[1px] bg-gradient-to-r from-transparent via-coral-400 to-transparent" />
+            <div className="w-8 sm:w-10 h-[1px] bg-gradient-to-r from-transparent via-coral-400 to-transparent" />
           </div>
         </div>
 
-        {/* Grid de características con diseño asimétrico y orgánico */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        {/* Grid de Features */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
           {features.map((feature, i) => {
             const Icon = feature.icon;
             const colors = getAccentColors(feature.accent);
@@ -143,91 +148,61 @@ export default function FeatureHome() {
             return (
               <div
                 key={i}
-                className="group relative"
+                className="group relative transition-transform duration-500 ease-out"
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                style={{
-                  transform: i % 2 === 0 ? "translateY(0)" : "translateY(1rem)",
-                }}
               >
-                {/* Tarjeta con diseño más natural */}
                 <div
-                  className={`
-                  relative h-full bg-white rounded-2xl p-7 
-                  border-2 transition-all duration-300
-                  ${
+                  className={`relative h-full bg-white rounded-2xl p-6 sm:p-7 border-2 transition-all duration-300 ${
                     isHovered
-                      ? colors.border + " shadow-xl ring-4 " + colors.ring
+                      ? `${colors.border} shadow-xl ring-4 ${colors.ring}`
                       : "border-sand-200 shadow-md"
-                  }
-                `}
+                  }`}
                 >
-                  {/* Sombreado de fondo con hover */}
                   <div
-                    className={`
-                    absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300
-                    ${colors.light}
-                    ${isHovered ? "opacity-30" : "opacity-0"}
-                  `}
+                    className={`absolute inset-0 rounded-2xl transition-opacity duration-300 ${colors.light} ${
+                      isHovered ? "opacity-30" : "opacity-0"
+                    }`}
                   />
 
-                  {/* Contenido */}
                   <div className="relative z-10">
-                    {/* ESTILO DE ICONOS */}
-                    <div className="mb-6 relative inline-block">
-                      <div
-                        className={`
-                        absolute inset-0 rounded-xl blur-lg opacity-30 transition-all duration-300
-                        ${colors.medium}
-                        ${isHovered ? "scale-110" : "scale-100"}
-                      `}
-                      />
-                      <div
-                        className={`
-                        relative w-14 h-14 rounded-xl flex items-center justify-center
-                        border-2 transition-all duration-300
-                        ${
-                          isHovered
-                            ? colors.medium + " border-transparent shadow-lg"
-                            : "bg-white " + colors.border
-                        }
-                      `}
-                      >
+                    <div className="mb-6">
+                      <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center border-2 bg-white transition-all duration-300 mx-auto sm:mx-0">
                         <Icon
-                          className={`w-6 h-6 transition-colors duration-300 ${
+                          className={`w-6 h-6 sm:w-7 sm:h-7 transition-colors duration-300 ${
                             isHovered ? "text-white" : colors.dark
                           }`}
                           strokeWidth={1.8}
                         />
+                        <div
+                          className={`absolute inset-0 rounded-xl -z-10 transition-transform duration-300 ${
+                            isHovered
+                              ? `${colors.medium} scale-110`
+                              : "scale-100 opacity-0"
+                          }`}
+                        />
                       </div>
                     </div>
 
-                    {/* TITULO DE CARDS */}
                     <h3
-                      className={`
-                      text-xl md:text-2xl font-medium mb-2 transition-colors duration-300
-                      ${isHovered ? colors.dark : "text-neutral-900"}
-                    `}
+                      className={`text-lg sm:text-xl md:text-2xl font-medium mb-2 text-center sm:text-left transition-colors duration-300 ${
+                        isHovered ? colors.dark : "text-neutral-900"
+                      }`}
                     >
                       {feature.title}
                     </h3>
 
-                    {/* Descripción */}
-                    <p className="text-base text-neutral-600 leading-relaxed font-light">
+                    <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-light text-center sm:text-left">
                       {feature.description}
                     </p>
 
-                    {/* Línea decorativa inferior */}
-                    <div className="mt-6 flex items-center gap-2">
+                    <div className="mt-5 flex items-center justify-center sm:justify-start gap-2">
                       <div
-                        className={`
-                        h-0.5 transition-all duration-500 rounded-full
-                        ${
+                        className={`h-0.5 rounded-full transition-all duration-500 ${
                           isHovered
-                            ? "w-full " + colors.medium
+                            ? `w-14 ${colors.medium}`
                             : "w-8 bg-sand-300"
-                        }
-                      `}
+                        }`}
                       />
                       {!isHovered && (
                         <>
