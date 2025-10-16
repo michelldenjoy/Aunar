@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import doubleVillaVideo from "../../assets/doubleVilla.mp4"; // ajusta la ruta si cambia
+import doubleVillaVideo from "../../assets/doubleVilla.mp4";
 
 export default function HeaderDoubleVilla() {
   const navigate = useNavigate();
