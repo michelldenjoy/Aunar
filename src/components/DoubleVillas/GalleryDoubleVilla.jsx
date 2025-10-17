@@ -59,7 +59,8 @@ export default function GalleryDoubleVilla() {
           className="text-slate-600 max-w-2xl mx-auto mb-12"
         >
           Diseñadas para combinar independencia y convivencia, las Doble Villas
-          ofrecen espacios compartidos con el mismo nivel de detalle y elegancia.
+          ofrecen espacios compartidos con el mismo nivel de detalle y
+          elegancia.
         </motion.p>
 
         {/* 🖼️ Grid */}
@@ -79,7 +80,11 @@ export default function GalleryDoubleVilla() {
                 alt={img.title}
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent
+    opacity-100 sm:opacity-0 group-hover:opacity-100
+    transition-opacity duration-500 flex flex-col justify-end p-6"
+              >
                 <h3 className="text-white text-xl font-semibold">
                   {img.title}
                 </h3>
