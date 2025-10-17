@@ -10,7 +10,7 @@ export default function HeaderDoubleVilla() {
 
   return (
     <header className="relative h-[70vh] md:h-[85vh] overflow-hidden bg-slate-900">
-      {/* 🎥 Video de fondo */}
+    
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-70"
         src={doubleVillaVideo}
@@ -21,7 +21,7 @@ export default function HeaderDoubleVilla() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-transparent" />
 
-      {/* 🧭 Barra de navegación */}
+      {/* 🧭 menu interno */}
       <nav className="relative z-20 max-w-6xl mx-auto px-6 pt-6 flex items-center justify-between">
         <button
           onClick={() => navigate("/")}

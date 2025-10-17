@@ -52,7 +52,7 @@ export default function MapDoubleVilla() {
                 }`}
               />
 
-              {/* Si está reservada, muestra icono o cinta */}
+              {/* Reserva*/}
               {villa.status === "reserved" && (
                 <>
                   <div className="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center">

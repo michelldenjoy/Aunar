@@ -62,7 +62,7 @@ export default function GalleryVilla() {
           ofreciendo espacios acogedores rodeados de naturaleza.
         </motion.p>
 
-        {/* 🖼️ Grid de imágenes */}
+        {/* imágenes */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((img, i) => (
             <motion.div

@@ -17,7 +17,7 @@ export default function HeroHome() {
         playsInline
       />
 
-      {/* OVERLAY SUTIL */}
+      {/* OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/30 to-transparent pointer-events-none" />
 
       {/* CONTENIDO */}
@@ -55,7 +55,7 @@ export default function HeroHome() {
         </div>
       </div>
 
-      {/* INDICADOR SCROLL */}
+      {/* SCROLL */}
       <div className="absolute bottom-4 sm:bottom-6 right-3 xs:right-4 sm:right-8 flex flex-col items-center gap-2 sm:gap-3">
         <span className="text-[7px] xs:text-[8px] sm:text-[9px] tracking-[0.25em] uppercase text-white/40 font-light rotate-90 mb-5 sm:mb-6">
           {t("heroHome.scroll")}

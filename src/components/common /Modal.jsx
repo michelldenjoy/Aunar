@@ -17,7 +17,7 @@ export default function Modal({ isOpen, onClose, children }) {
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0.9 }}
-            onClick={(e) => e.stopPropagation()} // Evita cerrar al hacer clic dentro
+            onClick={(e) => e.stopPropagation()} 
           >
             {children}
           </motion.div>

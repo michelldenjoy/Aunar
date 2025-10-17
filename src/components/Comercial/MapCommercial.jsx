@@ -22,7 +22,7 @@ export default function MapCommercial() {
 
   return (
     <div className="relative">
-      {/* Plano simulado */}
+      
       <div className="relative bg-slate-200 h-[500px] w-full rounded-xl overflow-hidden">
         {commercials.map((commercial) => (
           <div
@@ -51,7 +51,7 @@ export default function MapCommercial() {
                 }`}
               />
 
-              {/* Si está reservado */}
+              {/* Sistema d reserva*/}
               {commercial.status === "reserved" && (
                 <>
                   <div className="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center">
@@ -65,7 +65,7 @@ export default function MapCommercial() {
               )}
             </div>
 
-            {/* Nombre del local */}
+            
             <span
               className={`mt-1 text-xs px-2 py-1 rounded-full shadow-sm ${
                 commercial.status === "available"
@@ -79,7 +79,7 @@ export default function MapCommercial() {
         ))}
       </div>
 
-      {/* Modal con detalles */}
+      {/* Modal */}
       <Modal
         isOpen={!!activeCommercial}
         onClose={() => setActiveCommercial(null)}

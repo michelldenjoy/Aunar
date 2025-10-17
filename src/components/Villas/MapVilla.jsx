@@ -24,7 +24,7 @@ export default function MapVilla() {
 
   return (
     <div className="relative">
-      {/* Plano simulado */}
+      {/* Plano*/}
       <div className="relative bg-slate-200 h-[500px] w-full rounded-xl overflow-hidden">
         {villas.map((villa) => (
           <div

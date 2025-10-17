@@ -20,7 +20,7 @@ export default function Navbar() {
     { path: "/contact", label: t("navbar.contact") },
   ];
 
-  // Detectar scroll para cambiar estilo del navbar
+  // Detecta scroll para cambiar estilo del navbar
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -55,7 +55,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         
-        {/* Logo elegante */}
+      
         <Link
           to="/"
           className="relative group"
@@ -71,7 +71,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop links - minimalistas */}
+        {/*links */}
         <ul className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
             <li key={link.path}>
@@ -101,7 +101,7 @@ export default function Navbar() {
             <LanguageSwitcher />
           </div>
 
-          {/* Mobile toggle minimalista */}
+          {/* Mobile toggle */}
           <button
             aria-controls="mobile-menu"
             aria-expanded={open}
@@ -116,7 +116,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu elegante */}
+      {/* Mobile menu*/}
       <div
         id="mobile-menu"
         className={`lg:hidden transition-all duration-500 ease-out ${
