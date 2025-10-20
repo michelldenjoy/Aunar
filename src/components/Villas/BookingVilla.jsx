@@ -6,7 +6,7 @@ export default function BookingVilla() {
   const { selectedVilla } = useVilla();
   const recaptchaRef = useRef(null);
   const [isClient, setIsClient] = useState(false);
-  const [success, setSuccess] = useState(false); // <-- estado de éxito
+  const [success, setSuccess] = useState(false); 
 
   useEffect(() => {
     setIsClient(true);
@@ -23,7 +23,7 @@ export default function BookingVilla() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const token = recaptchaRef.current.getValue(); // obtiene el token generado por el usuario
+    const token = recaptchaRef.current.getValue(); 
     if (!token) {
       alert("Por favor verifica que no eres un robot.");
       return;
