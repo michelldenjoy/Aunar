@@ -6,8 +6,8 @@ export default function BookingVilla() {
   const { selectedVilla } = useVilla();
   const recaptchaRef = useRef(null);
   const [isClient, setIsClient] = useState(false);
+  const [success, setSuccess] = useState(false); // <-- estado de éxito
 
-  // Esto asegura que ReCAPTCHA solo se cargue en el cliente
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -33,6 +33,8 @@ export default function BookingVilla() {
     console.log("Token ReCAPTCHA v2:", token);
 
     // Aquí enviarías formData + token a tu backend
+    // Por ahora simulamos éxito
+    setSuccess(true);
   };
 
   return (
@@ -97,6 +99,14 @@ export default function BookingVilla() {
           Enviar reserva
         </button>
 
+        {/* Mensaje de éxito */}
+        {success && (
+          <p className="mt-4 text-green-600 font-medium text-center">
+            ¡Tu reserva ha sido enviada con éxito!
+          </p>
+        )}
+
+        {/* ReCAPTCHA v2 */}
         {isClient && (
           <ReCAPTCHA
             sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
