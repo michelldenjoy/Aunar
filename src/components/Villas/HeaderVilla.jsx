@@ -1,7 +1,7 @@
 // src/components/Villas/HeaderVilla.jsx
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import villa from "../../assets/Villaheader.mp4";
+
 
 export default function HeaderVilla() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function HeaderVilla() {
     <header className="relative h-[70vh] md:h-[85vh] overflow-hidden bg-slate-900">
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-70"
-        src={villa}
+        src="/public/videos/Villaheader.mp4"
         autoPlay
         loop
         muted

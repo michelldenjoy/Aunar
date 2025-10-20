@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import doubleVillaVideo from "../../assets/doubleVilla.mp4";
+
 
 export default function HeaderDoubleVilla() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function HeaderDoubleVilla() {
     
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-70"
-        src={doubleVillaVideo}
+        src="/videos/doubleVilla.mp4"
         autoPlay
         loop
         muted

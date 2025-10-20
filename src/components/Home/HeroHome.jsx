@@ -1,5 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import herovideo from "../../assets/herovideo.mp4";
 import { useTranslation } from "react-i18next";
 
 export default function HeroHome() {
@@ -10,7 +9,7 @@ export default function HeroHome() {
       {/* VIDEO DE FONDO */}
       <video
         className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
-        src={herovideo}
+        src="/public/videos/herovideo.mp4"
         autoPlay
         loop
         muted

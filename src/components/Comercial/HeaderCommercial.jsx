@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import videoCommercial from "../../assets/commercialheader.mp4";
+
 
 export default function HeaderCommercial() {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ export default function HeaderCommercial() {
     <header className="relative h-[70vh] md:h-[85vh] overflow-hidden bg-slate-900">
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-70"
-        src={videoCommercial}
+        src="/public/videos/commercialheader.mp4"
         autoPlay
         loop
         muted

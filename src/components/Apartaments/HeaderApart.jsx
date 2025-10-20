@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import apartmentHeader from "../../assets/apartmentheader2.mp4"; 
+ 
 
 export default function HeaderApartment() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function HeaderApartment() {
       {/* 🎥 Video de fondo */}
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-70"
-        src={apartmentHeader}
+        src="/public/videos/apartmentheader2.mp4"
         autoPlay
         loop
         muted
