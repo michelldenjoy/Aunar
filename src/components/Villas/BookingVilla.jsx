@@ -20,26 +20,19 @@ export default function BookingVilla() {
     );
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!recaptchaRef.current) return;
-
-    try {
-      // Ejecuta ReCAPTCHA invisible y obtiene el token
-      const token = await recaptchaRef.current.executeAsync();
-      recaptchaRef.current.reset(); // resetea para futuros envíos
-
-      console.log("Token ReCAPTCHA:", token);
-
-      // Aquí enviarías los datos del formulario y el token a tu backend
-      // fetch("/api/reservas", { method: "POST", body: JSON.stringify({ ...formData, token }) })
-      alert("Formulario enviado con éxito (simulado)");
-
-    } catch (err) {
-      console.error("Error con ReCAPTCHA:", err);
-      alert("Error al validar ReCAPTCHA");
+    const token = recaptchaRef.current.getValue(); // obtiene el token generado por el usuario
+    if (!token) {
+      alert("Por favor verifica que no eres un robot.");
+      return;
     }
+
+    recaptchaRef.current.reset(); // resetea la casilla
+    console.log("Token ReCAPTCHA v2:", token);
+
+    // Aquí enviarías formData + token a tu backend
   };
 
   return (
@@ -104,12 +97,13 @@ export default function BookingVilla() {
           Enviar reserva
         </button>
 
-        {/* ReCAPTCHA invisible */}
         {isClient && (
           <ReCAPTCHA
             sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-            size="invisible"
             ref={recaptchaRef}
+            onChange={(token) => {
+              console.log("Token ReCAPTCHA v2:", token);
+            }}
           />
         )}
       </form>
