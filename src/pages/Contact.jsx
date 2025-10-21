@@ -34,13 +34,15 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-sand-500 via-neutral-300 to-caribbean-700 text-slate-800 py-24">
+    <div className="bg-texture text-slate-800 py-24">
       <button
         onClick={() => navigate("/")}
-        className="absolute top-6 left-6 flex items-center gap-2 bg-white/10 hover:bg-white/20 text-caribbean-800 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm transition"
+        className="absolute top-6 left-6 flex items-center gap-2 bg-sand-200 hover:bg-white/20 text-caribbean-800 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm transition"
       >
         <ArrowLeft size={18} />
         <span>Inicio</span>
+
+
       </button>
       <div className="max-w-6xl mx-auto px-6 text-center">
         <motion.h1
@@ -48,7 +50,7 @@ export default function Contact() {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-light text-slate-900 mb-6"
+          className="text-4xl md:text-5xl font-semibold text-neutral-900 mb-6"
         >
           Contáctanos
         </motion.h1>
@@ -58,7 +60,7 @@ export default function Contact() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-slate-600 max-w-2xl mx-auto mb-12"
+          className="text-neutral-800 max-w-2xl mx-auto mb-12"
         >
           Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo para
           resolver tus dudas o coordinar una visita.
