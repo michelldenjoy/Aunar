@@ -21,7 +21,6 @@ export default function MapPage() {
 
   return (
     <div className="flex flex-col items-center justify-center py-10 bg-stone-900 relative min-h-screen">
-      {/* 🔙 Botón Inicio */}
       <button
         onClick={() => navigate("/")}
         className="absolute top-6 left-6 flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm transition"
