@@ -272,9 +272,9 @@ export default function ElegantGalleryHome() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 sm:mb-20">
             <div className="inline-flex items-center gap-2 mb-6">
-              <div className="w-12 h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
-              <Sparkles className="w-5 h-5 text-teal-500" strokeWidth={1.5} />
-              <div className="w-12 h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
+              <Sparkles className="w-5 h-5 text-neutral-500" strokeWidth={1.5} />
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
             </div>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-stone-900 mb-6 tracking-tight">
@@ -319,11 +319,10 @@ export default function ElegantGalleryHome() {
       </section>
 
       {/* Location Section */}
-      <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 bg-texture text-neutral-800 relative overflow-hidden">
-        
+      <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 bg-texture text-sand-100 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 tracking-tight">
               Todo a Tu Alcance
             </h2>
             <p className="text-lg sm:text-xl text-neutral-600 max-w-3xl mx-auto font-light">
@@ -343,8 +342,8 @@ export default function ElegantGalleryHome() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-teal-900 mb-1">{loc.time}</div>
-                  <div className="text-sm text-teal-900 font-semibold">{loc.place}</div>
+                  <div className="text-2xl font-semibold text-teal-800 mb-1">{loc.time}</div>
+                  <div className="text-sm text-teal-800 font-semibold">{loc.place}</div>
                 </div>
               </div>
             ))}
@@ -379,7 +378,7 @@ export default function ElegantGalleryHome() {
               <ul className="space-y-4">
                 {["Cocinas Europeas con Electrodomésticos Premium", "Baños en Mármol con Acabados de Lujo", "Pisos de Madera Natural Certificada", "Sistema de Domótica Integral"].map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center mt-0.5">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-sand-300 flex items-center justify-center mt-0.5">
                       <CheckCircle2 className="w-4 h-4 text-teal-600" strokeWidth={2} />
                     </div>
                     <span className="text-sm sm:text-base text-stone-700 font-light">{feature}</span>
@@ -402,9 +401,9 @@ export default function ElegantGalleryHome() {
         
         <div className="relative max-w-4xl mx-auto text-center text-white">
           <div className="inline-flex items-center gap-2 mb-8">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
-            <div className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-sand-400 to-transparent" />
+            <div className="w-2 h-2 rounded-full bg-sand-400 animate-pulse" />
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-sand-400 to-transparent" />
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-light mb-6 tracking-tight leading-tight">
