@@ -99,3 +99,11 @@
   --letter-spacing-wider: 0.05em;
   --letter-spacing-widest: 0.3em;
 }
+
+.bg-texture {
+  background-image: url('/images/texture3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.9;
+}

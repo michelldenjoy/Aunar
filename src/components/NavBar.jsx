@@ -68,7 +68,7 @@ export default function Navbar() {
             <span className="text-[10px] tracking-[0.3em] uppercase text-teal-600/60 font-medium -mt-1">
               Punta Cana
             </span>
-            <span className="text-[12px] tracking-[0.3em] uppercase text-black font-bold text-center ml-2">
+            <span className="text-[12px] tracking-[0.3em] uppercase text-neutral-700 font-semibold text-center ml-4">
               Fase I
             </span>
           </div>
