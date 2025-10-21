@@ -9,7 +9,7 @@ export default function HeroHome() {
       {/* VIDEO DE FONDO */}
       <video
         className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
-        src="/public/videos/herovideo.mp4"
+        src="/header.mp4"
         autoPlay
         loop
         muted

@@ -13,7 +13,7 @@ export default function HeaderApartment() {
       {/* 🎥 Video de fondo */}
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-70"
-        src="/public/videos/apartmentheader2.mp4"
+        src="/apartmentheader.mp4"
         autoPlay
         loop
         muted

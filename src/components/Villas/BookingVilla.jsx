@@ -29,11 +29,10 @@ export default function BookingVilla() {
       return;
     }
 
-    recaptchaRef.current.reset(); // resetea la casilla
+    recaptchaRef.current.reset(); 
     console.log("Token ReCAPTCHA v2:", token);
 
-    // Aquí enviarías formData + token a tu backend
-    // Por ahora simulamos éxito
+
     setSuccess(true);
   };
 
@@ -91,7 +90,7 @@ export default function BookingVilla() {
           />
         </div>
 
-        {/* Botón de envío */}
+        
         <button
           type="submit"
           className="w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition"
@@ -99,14 +98,14 @@ export default function BookingVilla() {
           Enviar reserva
         </button>
 
-        {/* Mensaje de éxito */}
+        
         {success && (
           <p className="mt-4 text-green-600 font-medium text-center">
             ¡Tu reserva ha sido enviada con éxito!
           </p>
         )}
 
-        {/* ReCAPTCHA v2 */}
+        
         {isClient && (
           <ReCAPTCHA
             sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}

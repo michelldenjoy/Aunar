@@ -13,7 +13,7 @@ export default function HeaderDoubleVilla() {
     
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-70"
-        src="/videos/doubleVilla.mp4"
+        src="/doubleVilla.mp4"
         autoPlay
         loop
         muted
