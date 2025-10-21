@@ -15,7 +15,7 @@ export default function BookingVilla() {
   if (!selectedVilla) {
     return (
       <div className="text-center py-20">
-        <p className="text-slate-600">No has seleccionado ninguna villa.</p>
+        <p className="text-slate-600">No has seleccionado ninguna Villa.</p>
       </div>
     );
   }
@@ -31,8 +31,7 @@ export default function BookingVilla() {
 
     recaptchaRef.current.reset(); 
     console.log("Token ReCAPTCHA v2:", token);
-
-
+    
     setSuccess(true);
   };
 

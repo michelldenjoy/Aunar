@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useCommercial } from "../../hooks/useCommercial";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function BookingCommercial() {
   const { selectedCommercial } = useCommercial();
+  const recaptchaRef = useRef(null);
+  const [isClient, setIsClient] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   if (!selectedCommercial) {
     return (
@@ -10,6 +18,21 @@ export default function BookingCommercial() {
         <p className="text-slate-600">No has seleccionado ningun Comercio.</p>
       </div>
     );
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const token = recaptchaRef.current.getValue();
+    if (!token) {
+      alert("Por favor verifica que no eres un robot.");
+      return;
+    }
+
+    recaptchaRef.current.reset();
+    console.log("Token ReCAPTCHA v2:", token);
+
+    setSuccess(true);
   }
 
   return (
@@ -27,15 +50,17 @@ export default function BookingCommercial() {
         </p>
       </div>
 
-      <form className="space-y-4">
+      <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
           <label className="block text-slate-700 text-sm font-medium mb-1">
             Nombre completo
           </label>
           <input
             type="text"
+            name="name"
             className="w-full border border-slate-300 rounded-lg px-3 py-2"
             placeholder="Tu nombre"
+            required
           />
         </div>
 
@@ -45,8 +70,10 @@ export default function BookingCommercial() {
           </label>
           <input
             type="email"
+            name="email"
             className="w-full border border-slate-300 rounded-lg px-3 py-2"
             placeholder="tuemail@ejemplo.com"
+            required
           />
         </div>
 
@@ -55,11 +82,13 @@ export default function BookingCommercial() {
             Mensaje
           </label>
           <textarea
+          name="message"
             className="w-full border border-slate-300 rounded-lg px-3 py-2"
             rows="4"
             placeholder="Consulta o solicitud adicional"
           />
         </div>
+
 
         <button
           type="submit"
@@ -67,6 +96,24 @@ export default function BookingCommercial() {
         >
           Enviar reserva
         </button>
+
+
+        {success && (
+          <p className="mt-4 text-green-600 font-medium text-center">
+            ¡Tu reserva ha sido enviada con éxito!
+          </p>
+        )}
+
+
+        {isClient && (
+          <ReCAPTCHA
+            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+            ref={recaptchaRef}
+            onChange={(token) => {
+              console.log("Token ReCAPTCHA v2:", token);
+            }}
+          />
+        )}
       </form>
     </div>
   );
