@@ -108,7 +108,7 @@ export default function Location() {
 
 
   return (
-    <div>
+    <div className="bg-stone-50 overflow-x-hidden w-full">
       <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 bg-texture text-sand-100 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">

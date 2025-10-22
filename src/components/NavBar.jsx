@@ -7,6 +7,8 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
   const links = [
@@ -20,14 +22,32 @@ export default function Navbar() {
     { path: "/contact", label: t("navbar.contact") },
   ];
 
-  // Detecta scroll para cambiar estilo del navbar
+  // Detecta scroll para cambiar estilo del navbar Y mostrar/ocultar
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      // Cambia el estilo cuando hace scroll
+      setScrolled(currentScrollY > 50);
+      
+      // Mostrar/ocultar navbar según dirección del scroll
+      if (currentScrollY < 10) {
+        // Si está casi arriba del todo, siempre mostrar
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling hacia abajo - ocultar
+        setVisible(false);
+      } else {
+        // Scrolling hacia arriba - mostrar
+        setVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   // Cerrar menú móvil al cambiar de ruta
   useEffect(() => {
@@ -48,6 +68,8 @@ export default function Navbar() {
       role="navigation"
       aria-label="Main navigation"
       className={`w-full fixed top-0 z-50 transition-all duration-500 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      } ${
         scrolled 
           ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-100" 
           : "bg-white/70 backdrop-blur-md"

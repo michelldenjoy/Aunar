@@ -17,7 +17,7 @@ export default function BloqueInfo() {
 
 
   return (
-    <div>
+    <div className="bg-stone-50 overflow-x-hidden w-full">
       <section className="bg-texture text-elegant-navy py-8 sm:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">

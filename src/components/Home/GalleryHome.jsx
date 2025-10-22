@@ -4,15 +4,10 @@ import {
 } from "lucide-react";
 
 export default function GalleryHome() {
-  const [scrollY, setScrollY] = useState(0);
+
   // const [currentSlide, setCurrentSlide] = useState(0);
   // const [hoveredAmenity, setHoveredAmenity] = useState(null);
 
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
