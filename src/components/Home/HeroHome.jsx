@@ -17,7 +17,7 @@ export default function HeroHome() {
       />
 
       {/* OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/30 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 pointer-events-none" />
 
       {/* CONTENIDO */}
       <div className="relative z-10 w-full px-4 xs:px-5 sm:px-6 md:px-10 lg:px-12 pb-20 sm:pb-24 md:pb-28">

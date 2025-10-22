@@ -101,9 +101,16 @@
 }
 
 .bg-texture {
-  background-image: url('/images/texture3.jpg');
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),  /* capa semitransparente */
+      rgba(255, 255, 255, 0.5)
+    ),
+    url('/images/texture15.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
-  opacity: 0.9;
+}
+
+.foto{
+  background-image: url('/foto/nightpool.jpg');
 }
