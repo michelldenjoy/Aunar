@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import VillasPage from './pages/VillasPage';
 import Footer from './components/Footer';
+import WhatsAppBubble from './components/WhatsappBubble';
 
 
 
@@ -30,6 +31,7 @@ const App = () => {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <WhatsAppBubble />
       <Footer />
     </BrowserRouter>
   );
