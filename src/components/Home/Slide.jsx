@@ -5,23 +5,23 @@ export default function EleganceSection() {
   const features = [
     {
       text: "Vestíbulo de bienvenida con entrada de doble altura y diseño orgánico que refleja la esencia natural del proyecto.",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+      image: "amenities/vestibulo.jpg"
     },
     {
       text: "Gimnasios interiores y al aire libre, ideales para entrenar en conexión con el entorno.",
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80"
+      image: "amenities/gym.jpg"
     },
     {
       text: "Piscinas estilo bosque, rodeadas de vegetación tropical y terrazas relajantes.",
-      image: "https://images.unsplash.com/photo-1575429198097-0414ec8e8cd?w=800&q=80"
+      image: "amenities/infinity.jpg"
     },
     {
       text: "Zonas familiares y áreas de juego para niños, tanto interiores como exteriores.",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+      image: "amenities/nigthpool.jpg"
     },
     {
       text: "Terrazas para barbacoa y áreas verdes perfectas para eventos, reuniones o tardes entre amigos.",
-      image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80"
+      image: "amenities/terrace.jpg"
     },
     {
       text: "Santuarios de bienestar y espacios al aire libre, pensados para la meditación, el yoga y la calma interior.",
@@ -33,11 +33,11 @@ export default function EleganceSection() {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
-  // rota cada 5 segundos
+  // rota cada 7 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveImage((prev) => (prev + 1) % features.length);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
