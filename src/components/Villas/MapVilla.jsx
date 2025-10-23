@@ -42,7 +42,7 @@ export default function MapVilla() {
             }}
           >
             <div className="relative group">
-              {/* Imagen miniatura */}
+              {/*foto mini */}
               <img
                 src={villa.image}
                 alt={villa.name}
@@ -53,7 +53,7 @@ export default function MapVilla() {
                 }`}
               />
 
-              {/* Si está reservada */}
+              {/* if reserved Y */}
               {villa.status === "reserved" && (
                 <>
                   <div className="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center">
@@ -101,7 +101,6 @@ export default function MapVilla() {
                 {activeVilla.price.toLocaleString()}
               </p>
 
-              {/* Mostrar aviso si está reservada */}
               {activeVilla.status === "reserved" && (
                 <p className="mt-4 text-red-600 font-semibold">
                   ⚠️ Esta propiedad ya está reservada.

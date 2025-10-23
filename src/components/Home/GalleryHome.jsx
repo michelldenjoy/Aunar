@@ -1,13 +1,8 @@
-import { useState, useEffect } from "react";
-import {
-  CheckCircle2,
-} from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export default function GalleryHome() {
-
   // const [currentSlide, setCurrentSlide] = useState(0);
   // const [hoveredAmenity, setHoveredAmenity] = useState(null);
-
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -15,7 +10,6 @@ export default function GalleryHome() {
   //   }, 6000);
   //   return () => clearInterval(interval);
   // }, []);
-
 
   // const heroSlides = [
   //   {
@@ -44,10 +38,6 @@ export default function GalleryHome() {
   //   { icon: Award, text: "Ubicación exclusiva" },
   //   { icon: Building2, text: "Arquitectura contemporánea" },
   // ];
-
-
-
-  
 
   return (
     <div className="bg-stone-50 overflow-x-hidden w-full">
@@ -117,63 +107,9 @@ export default function GalleryHome() {
         </div> */}
       {/* </section> */}
 
-    
-
-
-
       {/* Location Section */}
-      
 
-      {/* Interior Design Section */}
-      <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div className="relative h-[450px] sm:h-[550px] md:h-[650px] order-2 md:order-1">
-              <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
-                alt="Interior"
-                className="w-full h-full object-cover rounded-3xl shadow-2xl"
-              />
-              <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-gradient-to-br from-teal-400/20 to-amber-400/20 rounded-full blur-3xl" />
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-stone-900 tracking-tight">
-                Elegancia en Cada Detalle
-              </h2>
-              <p className="text-base sm:text-lg text-stone-600 leading-relaxed mb-6 font-light">
-                Interiores que celebran la luz natural, la funcionalidad
-                inteligente y la belleza atemporal. Cada espacio ha sido
-                diseñado para ser un lienzo donde tu vida se despliega con
-                gracia.
-              </p>
-              <p className="text-base sm:text-lg text-stone-600 leading-relaxed mb-8 font-light">
-                Desde cocinas gourmet hasta baños spa, cada elemento refleja
-                nuestro compromiso con la excelencia y tu comodidad.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Cocinas Europeas con Electrodomésticos Premium",
-                  "Baños en Mármol con Acabados de Lujo",
-                  "Pisos de Madera Natural Certificada",
-                  "Sistema de Domótica Integral",
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-sand-300 flex items-center justify-center mt-0.5">
-                      <CheckCircle2
-                        className="w-4 h-4 text-neutral-900"
-                        strokeWidth={2}
-                      />
-                    </div>
-                    <span className="text-sm sm:text-base text-stone-700 font-light">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
       <section className="relative py-24 sm:py-32 md:py-40 px-4 sm:px-6 overflow-hidden">
@@ -182,6 +118,7 @@ export default function GalleryHome() {
           alt="CTA Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
+
         <div className="absolute inset-0 bg-gradient-to-r from-stone-900/85 to-stone-800/75" />
 
         <div className="relative max-w-4xl mx-auto text-center text-white">

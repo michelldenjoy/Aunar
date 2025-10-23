@@ -8,7 +8,7 @@ export const ApartmentContext = createContext();
 export function ApartmentProvider({ children }) {
   const [selectedApartment, setSelectedApartment] = useState(null);
 
-  const [apartments, setApartments] = useState([
+  const [apartments] = useState([
     {
       id: 1,
       name: "Ocean View Apartment",

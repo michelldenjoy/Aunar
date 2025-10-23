@@ -12,7 +12,8 @@ export function DoubleVillaProvider({ children }) {
       name: "Double Villa Coral",
       price: 410000,
       area: "230m²",
-      description: "Dúplex moderno con dos niveles, amplias terrazas y piscina privada.",
+      description:
+        "Dúplex moderno con dos niveles, amplias terrazas y piscina privada.",
       image: double1,
       coordinates: { x: 45, y: 60 },
       status: "available",
@@ -22,7 +23,8 @@ export function DoubleVillaProvider({ children }) {
       name: "Double Villa Garden",
       price: 465000,
       area: "250m²",
-      description: "Villa doble con jardín tropical, en zona privilegiada con balcones y acabados de lujo.",
+      description:
+        "Villa doble con jardín tropical, en zona privilegiada con balcones y acabados de lujo.",
       image: double2,
       coordinates: { x: 65, y: 45 },
       status: "reserved",
@@ -32,7 +34,8 @@ export function DoubleVillaProvider({ children }) {
       name: "Double Villa Sunset",
       price: 545000,
       area: "300m²",
-      description: "Villa doble con piscina infinita, jardin, diseño arquitectónico singular, materiales y acabados de alta gama.",
+      description:
+        "Villa doble con piscina infinita, jardin, diseño arquitectónico singular, materiales y acabados de alta gama.",
       image: double2,
       coordinates: { x: 20, y: 25 },
       status: "available",

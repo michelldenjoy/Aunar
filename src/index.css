@@ -111,6 +111,11 @@
   background-repeat: repeat;
 }
 
-.foto{
-  background-image: url('/foto/nightpool.jpg');
+.foto {
+  background-image: url('/foto/roomluxury.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px; /* o el tamaño que quieras */
+  border-radius: 1rem;
 }

@@ -4,7 +4,7 @@ export default function Location() {
 
     const locations = [
         {
-          time: "4 min",
+          time: "5 min",
           place: "Playa Principal",
           icon: (
             <svg
@@ -20,8 +20,8 @@ export default function Location() {
           ),
         },
         {
-          time: "10 min",
-          place: "Marina Internacional",
+          time: "8 min",
+          place: "Marina",
           icon: (
             <svg
               className="w-6 h-6"
@@ -70,7 +70,7 @@ export default function Location() {
           ),
         },
         {
-          time: "20 min",
+          time: "10 min",
           place: "Campo de Golf",
           icon: (
             <svg
@@ -88,8 +88,8 @@ export default function Location() {
           ),
         },
         {
-          time: "25 min",
-          place: "Distrito Financiero",
+          time: "20 min",
+          place: "Centro de Punta Cana",
           icon: (
             <svg
               className="w-6 h-6"

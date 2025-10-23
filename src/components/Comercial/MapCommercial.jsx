@@ -40,7 +40,7 @@ export default function MapCommercial() {
             }}
           >
             <div className="relative">
-              {/* Imagen miniatura */}
+              {/* foto mini */}
               <img
                 src={commercial.image}
                 alt={commercial.name}
@@ -51,13 +51,12 @@ export default function MapCommercial() {
                 }`}
               />
 
-              {/* Sistema d reserva*/}
+              {/* if reserved */}
               {commercial.status === "reserved" && (
                 <>
                   <div className="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center">
                     <Lock className="text-white w-5 h-5" />
                   </div>
-                  {/* Tooltip siempre visible */}
                   <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs bg-red-600 text-white px-2 py-0.5 rounded-full shadow-md opacity-100 transition">
                     Reservado
                   </span>

@@ -22,7 +22,6 @@ export default function MapApart() {
 
   return (
     <div className="relative">
-      {/* 🗺️ Plano simulado */}
       <div className="relative bg-slate-200 h-[500px] w-full rounded-xl overflow-hidden">
         {apartments.map((apartment) => (
           <div
@@ -40,7 +39,7 @@ export default function MapApart() {
             }}
           >
             <div className="relative">
-              {/* Imagen miniatura */}
+              {/* foto mini */}
               <img
                 src={apartment.image}
                 alt={apartment.name}
@@ -51,13 +50,13 @@ export default function MapApart() {
                 }`}
               />
 
-              {/* Si está reservada */}
+              {/* if reserved */}
               {apartment.status === "reserved" && (
                 <>
                   <div className="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center">
                     <Lock className="text-white w-5 h-5" />
                   </div>
-                  {/* Etiqueta visible también en móvil */}
+                  
                   <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs bg-red-600 text-white px-2 py-0.5 rounded-full shadow-md opacity-100 transition">
                     Reservado
                   </span>
@@ -65,7 +64,7 @@ export default function MapApart() {
               )}
             </div>
 
-            {/* Nombre */}
+            {/* if available */}
             <span
               className={`mt-1 text-xs px-2 py-1 rounded-full shadow-sm ${
                 apartment.status === "available"

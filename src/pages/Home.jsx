@@ -9,6 +9,7 @@ import Amenities from "../components/Home/Amenities";
 import BloqueInfo from "../components/Home/BloqueInfo";
 import Location from "../components/Home/Location";
 import ScrollToTop from "../components/Home/ScrollToTop";
+import Slide from "../components/Home/Slide";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
          <InfoImg />
          <Amenities />
          <Location />
+        <Slide />
         <GalleryHome />
         <FeatureHome />
       </main>

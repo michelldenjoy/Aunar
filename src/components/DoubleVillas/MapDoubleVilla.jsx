@@ -23,7 +23,6 @@ export default function MapDoubleVilla() {
 
   return (
     <div className="relative">
-      {/* Plano simulado */}
       <div className="relative bg-slate-200 h-[500px] w-full rounded-xl overflow-hidden">
         {doubleVillas.map((villa) => (
           <div
@@ -41,7 +40,7 @@ export default function MapDoubleVilla() {
             }}
           >
             <div className="relative group">
-              {/* Imagen miniatura */}
+              {/* foto mini */}
               <img
                 src={villa.image}
                 alt={villa.name}
@@ -52,7 +51,7 @@ export default function MapDoubleVilla() {
                 }`}
               />
 
-              {/* Reserva*/}
+              {/*if reserved*/}
               {villa.status === "reserved" && (
                 <>
                   <div className="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center">

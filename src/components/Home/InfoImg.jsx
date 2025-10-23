@@ -3,7 +3,6 @@ import React from "react";
 export default function InfoImg() {
   return (
     <div className="bg-stone-50 overflow-x-hidden w-full">
-      {/* Imagen superior de fondo */}
       <section className="relative w-full h-[60vh] sm:h-[50vh] md:h-[65vh] overflow-hidden">
         <img
           src="/fotos/roomluxury.jpg"
@@ -15,10 +14,7 @@ export default function InfoImg() {
 
       {/* BLOQUE INFORMATIVO */}
       <section className="relative w-full bg-cover bg-center text-white py-16 sm:py-20 md:py-24 m-0">
-        {/* Fondo de color (puedes mantener tu clase personalizada bg-elegant-navy) */}
         <div className="absolute inset-0 bg-elegant-navy"></div>
-
-        {/* Contenido sin márgenes ni padding lateral */}
         <div className="relative z-10 w-full text-center px-2 sm:px-4">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-light text-sand-100 mb-4 leading-snug">
             Apartamentos de 1 a 3 habitaciones | Villas de 4 habitaciones
@@ -26,8 +22,6 @@ export default function InfoImg() {
           <p className="text-lg sm:text-xl font-semibold text-sun-300 mb-10">
             Desde 300 mil $
           </p>
-
-          {/* Lista de características */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-8 text-sm sm:text-base text-sand-100">
             <span className="font-light">Dormitorios espaciosos</span>
             <span className="hidden sm:block text-amber-300/30">|</span>

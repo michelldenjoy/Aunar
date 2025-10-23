@@ -6,7 +6,7 @@ export const CommercialContext = createContext();
 
 export function CommercialProvider({ children }) {
   const [selectedCommercial, setSelectedCommercial] = useState(null);
-  const [commercials, setCommercials] = useState([
+  const [commercials] = useState([
     {
       id: 1,
       name: "Local Costa Market",

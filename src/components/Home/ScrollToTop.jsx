@@ -21,7 +21,6 @@ export default function ScrollToTop() {
     };
   }, []);
 
-  // Función para volver arriba suavemente
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

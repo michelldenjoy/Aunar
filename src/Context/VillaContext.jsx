@@ -6,7 +6,7 @@ export const VillaContext = createContext();
 
 export function VillaProvider({ children }) {
   const [selectedVilla, setSelectedVilla] = useState(null);
-  const [villas, setVillas] = useState([
+  const [villas] = useState([
     {
       id: 1,
       name: "Villa Sunset",
