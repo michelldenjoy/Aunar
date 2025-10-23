@@ -14,7 +14,7 @@ export default function InfoImg() {
 
       {/* BLOQUE INFORMATIVO */}
       <section className="relative w-full bg-cover bg-center text-white py-16 sm:py-20 md:py-24 m-0">
-        <div className="absolute inset-0 bg-elegant-navy"></div>
+        <div className="absolute inset-0 bg-elegant-slate"></div>
         <div className="relative z-10 w-full text-center px-2 sm:px-4">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-light text-sand-100 mb-4 leading-snug">
             Apartamentos de 1 a 3 habitaciones | Villas de 4 habitaciones
