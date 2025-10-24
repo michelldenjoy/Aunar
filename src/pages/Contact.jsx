@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Phone, Building2, X, ArrowLeft } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
   const navigate = useNavigate();
+  const formRef = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,12 +18,28 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => {
-      setSent(false);
-      setShowForm(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 2000);
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setSent(true);
+          setTimeout(() => {
+            setSent(false);
+            setShowForm(false);
+            setFormData({ name: "", email: "", message: "" });
+          }, 2000);
+        },
+        (error) => {
+          console.error("❌ Error al enviar el correo:", error.text);
+          alert("Hubo un problema al enviar el mensaje. Inténtalo más tarde.");
+        }
+      );
   };
 
   const fadeUp = {
@@ -34,16 +48,16 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-texture text-slate-800 py-24">
+    <div className="bg-texture text-slate-800 py-24 relative">
+      {/* 🔙 Botón inicio */}
       <button
         onClick={() => navigate("/")}
         className="absolute top-6 left-6 flex items-center gap-2 bg-sand-200 hover:bg-white/20 text-caribbean-800 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm transition"
       >
         <ArrowLeft size={18} />
         <span>Inicio</span>
-
-
       </button>
+
       <div className="max-w-6xl mx-auto px-6 text-center">
         <motion.h1
           variants={fadeUp}
@@ -112,7 +126,6 @@ export default function Contact() {
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
             >
-              {/* ❌ Botón cerrar */}
               <button
                 onClick={() => setShowForm(false)}
                 className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition"
@@ -125,7 +138,7 @@ export default function Contact() {
                   <h2 className="text-2xl font-semibold text-slate-800 mb-6 text-center">
                     Envíanos tu consulta
                   </h2>
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                     <input
                       type="text"
                       name="name"

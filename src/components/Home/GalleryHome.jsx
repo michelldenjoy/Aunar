@@ -122,12 +122,6 @@ export default function GalleryHome() {
         <div className="absolute inset-0 bg-gradient-to-r from-stone-900/85 to-stone-800/75" />
 
         <div className="relative max-w-4xl mx-auto text-center text-white">
-          <div className="inline-flex items-center gap-2 mb-8">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-sand-400 to-transparent" />
-            <div className="w-2 h-2 rounded-full bg-sand-400 animate-pulse" />
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-sand-400 to-transparent" />
-          </div>
-
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-light mb-6 tracking-tight leading-tight">
             Tu Inversión en Bienestar
           </h2>

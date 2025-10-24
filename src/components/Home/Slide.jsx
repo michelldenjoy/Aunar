@@ -66,7 +66,7 @@ export default function EleganceSection() {
   };
 
   return (
-    <section className="overflow-x-hidden w-full px-4 text-justify ">
+    <section className="overflow-x-hidden w-full px-4 py-8 text-justify ">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-center">
           
@@ -103,7 +103,7 @@ export default function EleganceSection() {
 
           
           <div className="order-1 md:order-2">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-light mb-8 text-stone-900 tracking-tight leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl  font-light mb-8 text-stone-900 tracking-tight leading-tight">
               Elegancia en<br />Cada Detalle
             </h2>
             
