@@ -66,7 +66,7 @@ export default function EleganceSection() {
   };
 
   return (
-    <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-white">
+    <section className="overflow-x-hidden w-full px-4 ">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-center">
           
