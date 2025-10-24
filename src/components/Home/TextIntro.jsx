@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function TextIntro() {
   return (
-    <div className="bg-stone-50 overflow-x-hidden w-full">
+    <div className="bg-stone-50 overflow-x-hidden w-full px-4 text-justify">
       {/* DESCRIPCION */}
       <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 bg-stone-50">
         <div className="max-w-7xl mx-auto">
