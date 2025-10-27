@@ -56,7 +56,7 @@ export default function HeroHome() {
 
       {/* detalle scroll */}
       <div className="absolute bottom-4 sm:bottom-6 right-3 xs:right-4 sm:right-8 flex flex-col items-center gap-2 sm:gap-3">
-        <span className="text-[7px] xs:text-[8px] sm:text-[9px] tracking-[0.25em] uppercase text-white/40 font-light rotate-90 mb-5 sm:mb-6">
+        <span className="text-[7px] xs:text-[8px] font sm:text-[9px] tracking-[0.25em] uppercase text-white/40 font-light rotate-90 mb-5 sm:mb-6">
           {t("heroHome.scroll")}
         </span>
         <div className="w-[1px] h-10 sm:h-14 bg-gradient-to-b from-white/30 to-transparent" />

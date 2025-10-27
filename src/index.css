@@ -105,7 +105,7 @@
       rgba(255, 255, 255, 0.6),  
       rgba(255, 255, 255, 0.6)
     ),
-    url('/images/texture3.jpg');
+    url('/images/texture2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
@@ -149,3 +149,15 @@
     background-position: 100% 50%;
   }
 } */
+
+body {
+  
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400; /* Asegúrate de que el peso coincida con el que importaste */
+  
+  
+}

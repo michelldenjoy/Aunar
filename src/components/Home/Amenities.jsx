@@ -81,19 +81,18 @@ export default function Amenities() {
         />
 
         <div className="relative z-10 flex flex-col items-center justify-center w-full m-0 p-0">
-          
           {/* mariconada decorativa */}
           <div className="text-center my-12 sm:my-16 lg:my-20 px-2">
-          <div className="inline-flex items-center gap-2 mb-8">
-            <div className="w-50 h-px bg-gradient-to-r from-elegant-navy via-sand-700 to-transparent" />
-            <div className="w-2 h-2 rounded-full bg-sand-700 animate-pulse" />
-            <div className="w-50 h-px bg-gradient-to-r from-transparent via-sand-700 to-elegant-navy" />
-          </div>
+            <div className="inline-flex items-center gap-2 mb-8">
+              <div className="w-50 h-px bg-gradient-to-r from-elegant-navy via-sand-700 to-transparent" />
+              <div className="w-2 h-2 rounded-full bg-sand-700 animate-pulse" />
+              <div className="w-50 h-px bg-gradient-to-r from-transparent via-sand-700 to-elegant-navy" />
+            </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-stone-900 mb-4 sm:mb-6 tracking-tight">
-              Comodidades que complementan tu estilo de vida
+            <h2 className="text-3xl md:text-4xl md:leading-normal lg:text-5xl xl:text-6xl font-light text-stone-900 mb-4 max-w-[85%] mx-auto my-4 sm:mb-6 tracking-tight">
+              Comodidades que elevan <br /> el bienestar de vida
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-stone-600 font-light leading-relaxed max-w-[90%] mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-stone-600 font-light leading-relaxed max-w-[85%] mx-auto">
               Cada espacio ha sido pensado para nutrir tu bienestar, inspirar tu
               creatividad y enriquecer tu día a día.
             </p>
@@ -166,7 +165,7 @@ export default function Amenities() {
                       </div>
                     </div>
 
-                     {/* Indicador en móvil 
+                    {/* Indicador en móvil 
                     <div
                       className={`absolute top-3 right-3 sm:hidden transition-all duration-300 ${
                         isActive ? "opacity-0" : "opacity-100"

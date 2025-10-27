@@ -111,7 +111,7 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      {/* ✉️ Modal Formulario */}
+      {/*  Modal */}
       <AnimatePresence>
         {showForm && (
           <motion.div
