@@ -21,7 +21,7 @@ export default function HeaderDoubleVilla() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-transparent" />
 
-        {/* Solo botón de inicio en el header */}
+        
         <nav className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 pt-6">
           <button
             onClick={() => navigate("/")}
@@ -46,7 +46,7 @@ export default function HeaderDoubleVilla() {
               </span>
             </h1>
             <p className="mt-3 text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Explora nuestras Villas dobles .
+              Explora nuestras Villas dobles y piensa en grande.
             </p>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function HeaderDoubleVilla() {
                 }}
               />
 
-              {/* Botones tipo pestaña */}
+              
               {[
                 { name: "Imágenes", route: "imagenes" },
                 { name: "Plano", route: "plano" },

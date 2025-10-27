@@ -21,7 +21,7 @@ export default function HeaderCommercial() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-transparent" />
 
-        {/* Solo botón de inicio en el header */}
+        
         <nav className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 pt-6">
           <button
             onClick={() => navigate("/")}
@@ -39,20 +39,20 @@ export default function HeaderCommercial() {
             {/* titulo */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               <span className="block bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                Villas
+                Comerciales 
               </span>
               <span className="block bg-gradient-to-r from-purple-200 via-pink-200 to-blue-200 bg-clip-text text-transparent mt-2">
-                Exclusivas
+                Para emprender
               </span>
             </h1>
             <p className="mt-3 text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Explora la galería, el plano y reserva tu villa favorita.
+              Explora la galería, el plano y proyecta tu futuro con nosotros.
             </p>
           </div>
         </div>
       </header>
 
-      {/* Menú de navegación debajo del header */}
+      {/* Menú */}
       <div className="sticky top-0 z-40 bg-[#fdfdfb]/95 backdrop-blur-md border-b border-[#ede9e0]/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-center py-6 relative">
@@ -69,7 +69,7 @@ export default function HeaderCommercial() {
                 }}
               />
 
-              {/* Botones tipo pestaña */}
+              
               {[
                 { name: "Imágenes", route: "imagenes" },
                 { name: "Plano", route: "plano" },
@@ -89,7 +89,7 @@ export default function HeaderCommercial() {
                     {item.name}
                   </span>
 
-                  {/* Efecto decorativo inferior tipo “ficha” */}
+                  
                   <span
                     className={`absolute -bottom-1 left-1/2 -translate-x-1/2 w-2/3 h-[2px] rounded-full transition-all duration-300
                 ${
