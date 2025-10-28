@@ -1,6 +1,6 @@
 // src/pages/ApartmentsPage.jsx
 import React from "react";
-import HeaderApartment from "../components/Apartaments/HeaderApart";
+import HeaderApartment from "../components/Apartaments/HeaderApartment";
 import ApartmentsRoutes from "../Routes/ApartmentsRoutes";
 import { ApartmentProvider } from "../Context/ApartmentContext";
 

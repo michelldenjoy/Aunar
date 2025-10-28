@@ -19,9 +19,6 @@ export default function InfoImg() {
           <h2 className="text-xl sm:text-2xl md:text-4xl font-light text-sand-100 mb-4 leading-snug">
             Apartamentos de 1 a 3 habitaciones | Villas de 4 habitaciones
           </h2>
-          <p className="text-lg sm:text-xl font-semibold text-sun-300 mb-10">
-            Desde 300 mil $
-          </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-8 text-sm sm:text-base text-sand-100">
             <span className="font-light">Dormitorios espaciosos</span>
             <span className="hidden sm:block text-amber-300/30">|</span>

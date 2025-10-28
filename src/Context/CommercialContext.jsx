@@ -27,6 +27,17 @@ export function CommercialProvider({ children }) {
       status: "reserved",
       coordinates: { x: 65, y: 40 },
     },
+    {
+      id: 3,
+      name: "Market Paradise",
+      price: 200000,
+      area: "100m²",
+      description: "Local comercial de una planata amplia, frente a areas verdes.",
+      image: local2,
+      status: "available",
+      coordinates: { x: 45, y: 20 },
+    },
+    
   ]);
 
   return (
