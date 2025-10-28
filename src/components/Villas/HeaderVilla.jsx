@@ -42,7 +42,7 @@ export default function HeaderVilla() {
               <span className="block bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
                 Villas
               </span>
-              <span className="block bg-gradient-to-r from-purple-200 via-pink-200 to-blue-200 bg-clip-text text-transparent mt-2">
+              <span className="block bg-gradient-to-r from-blue-200 via-teal-200 to-emerald-200 bg-clip-text text-transparent mt-2">
                 Exclusivas
               </span>
             </h1>
