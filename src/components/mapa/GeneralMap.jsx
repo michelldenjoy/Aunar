@@ -9,8 +9,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 18.4861,
-  lng: -69.9312,
+  lat: 18.6523,
+  lng: -68.4342,
 };
 
 export default function MapPage() {
@@ -33,7 +33,7 @@ export default function MapPage() {
 
       <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg">
         <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
-          <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
+          <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={16}>
             <Marker position={center} />
           </GoogleMap>
         </LoadScript>
