@@ -106,7 +106,7 @@ export default function BookingDoubleVilla() {
 
         {isClient && (
           <ReCAPTCHA
-            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+            sitekey={import.meta.env.VITE_RECAPTCHA_V3_KEY}
             ref={recaptchatRef}
             onChange={(token) => {
               console.log("Token ReCAPTCHA v2:", token);
