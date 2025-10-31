@@ -12,7 +12,7 @@ export default function Contact() {
   const navigate = useNavigate();
   const formRef = useRef();
   const recaptchaRef = useRef();
-  console.log("✅ SITE KEY V2:", import.meta.env.VITE_RECAPTCHA_V2_KEY);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
