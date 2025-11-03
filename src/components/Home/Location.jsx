@@ -89,7 +89,7 @@ export default function Location() {
         },
         {
           time: "20 min",
-          place: "Centro de Punta Cana",
+          place: "Punta Cana Centro",
           icon: (
             <svg
               className="w-6 h-6"
@@ -121,22 +121,22 @@ export default function Location() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {locations.map((loc, i) => (
               <div
                 key={i}
-                className="group flex items-center gap-4 bg-neutral-100 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-teal-800 transition-all duration-300"
+                className="group flex items-center gap-3 sm:gap-4 bg-neutral-100 border border-white/10 rounded-2xl p-4 sm:p-5 lg:p-6 hover:bg-white/10 hover:border-teal-800 transition-all duration-300 min-h-[100px]"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-coral-50 to-sand-600 flex items-center justify-center text-2xl shadow-lg shadow-black-500/20">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-coral-50 to-sand-600 flex items-center justify-center text-2xl shadow-lg shadow-black-500/20">
                     {loc.icon}
                   </div>
                 </div>
-                <div>
-                  <div className="text-2xl font-medium text-elegant-navy mb-1">
+                <div className="flex-1 min-w-0">
+                  <div className="text-xl sm:text-2xl font-medium text-elegant-navy mb-1">
                     {loc.time}
                   </div>
-                  <div className="text-sm text-elegant-navy font-semibold">
+                  <div className="text-[11px] sm:text-sm text-elegant-navy font-semibold truncate">
                     {loc.place}
                   </div>
                 </div>
