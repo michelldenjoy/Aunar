@@ -22,14 +22,14 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // obtener token del reCAPTCHA v2
+    // obtiene token de reCAPTCHA v2
     const token = recaptchaRef.current?.getValue();
     if (!token) {
       alert("Por favor verifica que no eres un robot.");
       return;
     }
 
-    // validar token en backend
+    // valida token en backend
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/verify-recaptcha`, {
         method: "POST",
