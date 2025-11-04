@@ -11,12 +11,14 @@ import Contact from './pages/Contact';
 import VillasPage from './pages/VillasPage';
 import Footer from './components/Footer';
 import WhatsAppBubble from './components/WhatsappBubble';
+import MainScrollTop from './components/MainScrollTop';
 
 
 
 const App = () => {
   return (
     <BrowserRouter>
+      <MainScrollTop />
       <Routes>
         <Route>
           <Route path="/" element={<Home />} />
