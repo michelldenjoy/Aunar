@@ -6,7 +6,7 @@ export default function BookingVilla() {
   const { selectedVilla } = useVilla();
   const recaptchaRef = useRef(null);
   const [isClient, setIsClient] = useState(false);
-  const [success, setSuccess] = useState(false); 
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -23,15 +23,15 @@ export default function BookingVilla() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const token = recaptchaRef.current.getValue(); 
+    const token = recaptchaRef.current.getValue();
     if (!token) {
       alert("Por favor verifica que no eres un robot.");
       return;
     }
 
-    recaptchaRef.current.reset(); 
+    recaptchaRef.current.reset();
     console.log("Token ReCAPTCHA v2:", token);
-    
+
     setSuccess(true);
   };
 
@@ -89,7 +89,6 @@ export default function BookingVilla() {
           />
         </div>
 
-        
         <button
           type="submit"
           className="w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition"
@@ -97,14 +96,17 @@ export default function BookingVilla() {
           Enviar reserva
         </button>
 
-        
         {success && (
-          <p className="mt-4 text-green-600 font-medium text-center">
-            ¡Tu reserva ha sido enviada con éxito!
-          </p>
+          <div className="text-center py-8">
+            <h3 className="text-2xl font-semibold text-teal-700 mb-2">
+              ¡Reserva solicitada!
+            </h3>
+            <p className="text-slate-600">
+              Gracias por contactarnos. Te responderemos en la brevedad posible.
+            </p>
+          </div>
         )}
 
-        
         {isClient && (
           <ReCAPTCHA
             sitekey={import.meta.env.VITE_RECAPTCHA_V3_KEY}

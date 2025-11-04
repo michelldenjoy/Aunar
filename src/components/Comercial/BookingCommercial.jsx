@@ -33,7 +33,7 @@ export default function BookingCommercial() {
     console.log("Token ReCAPTCHA v2:", token);
 
     setSuccess(true);
-  }
+  };
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-2xl shadow-md">
@@ -82,13 +82,12 @@ export default function BookingCommercial() {
             Mensaje
           </label>
           <textarea
-          name="message"
+            name="message"
             className="w-full border border-slate-300 rounded-lg px-3 py-2"
             rows="4"
             placeholder="Consulta o solicitud adicional"
           />
         </div>
-
 
         <button
           type="submit"
@@ -97,13 +96,16 @@ export default function BookingCommercial() {
           Enviar reserva
         </button>
 
-
         {success && (
-          <p className="mt-4 text-green-600 font-medium text-center">
-            ¡Tu reserva ha sido enviada con éxito!
-          </p>
+          <div className="text-center py-8">
+            <h3 className="text-2xl font-semibold text-teal-700 mb-2">
+              ¡Reserva solicitada!
+            </h3>
+            <p className="text-slate-600">
+              Gracias por contactarnos. Te responderemos en la brevedad posible.
+            </p>
+          </div>
         )}
-
 
         {isClient && (
           <ReCAPTCHA

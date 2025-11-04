@@ -77,7 +77,7 @@ export default function Contact() {
   const fadeUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } };
 
   return (
-    <div className="bg-texture text-slate-800 py-24 relative">
+    <div className="bg-texture min-h-[90dvh] text-slate-800 py-24 relative">
       <button
         onClick={() => navigate("/")}
         className="absolute top-6 left-6 flex items-center gap-2 bg-sand-200 hover:bg-white/20 text-caribbean-800 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm transition"

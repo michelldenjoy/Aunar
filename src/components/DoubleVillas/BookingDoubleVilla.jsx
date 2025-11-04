@@ -84,7 +84,7 @@ export default function BookingDoubleVilla() {
             Mensaje
           </label>
           <textarea
-          name="message"
+            name="message"
             className="w-full border border-slate-300 rounded-lg px-3 py-2"
             rows="4"
             placeholder="Consulta o solicitud adicional"
@@ -99,9 +99,14 @@ export default function BookingDoubleVilla() {
         </button>
 
         {success && (
-          <p className="mt-4 text-green-600 font-medium text-center">
-            ¡Tu reserva ha sido enviada con éxito!
-          </p>
+          <div className="text-center py-8">
+            <h3 className="text-2xl font-semibold text-teal-700 mb-2">
+              ¡Reserva solicitada!
+            </h3>
+            <p className="text-slate-600">
+              Gracias por contactarnos. Te responderemos en la brevedad posible.
+            </p>
+          </div>
         )}
 
         {isClient && (
