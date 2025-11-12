@@ -8,7 +8,6 @@ export default function VillasPage() {
 
   return (
     <VillaProvider>
-      <NavBar />
       <div className="min-h-screen bg-white">
         <HeaderVilla onBack={handleBack} />
         <main className="max-w-6xl mx-auto px-6 py-10">

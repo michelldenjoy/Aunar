@@ -12,6 +12,7 @@ import VillasPage from './pages/VillasPage';
 import Footer from './components/Footer';
 import WhatsAppBubble from './components/WhatsappBubble';
 import MainScrollTop from './components/MainScrollTop';
+import Navbar from './components/NavBar';
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <MainScrollTop />
+      <Navbar />
       <Routes>
         <Route>
           <Route path="/" element={<Home />} />
