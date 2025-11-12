@@ -1,17 +1,24 @@
-import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Instagram,
+  Youtube,
+} from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-elegant-navy text-sand-200 pt-14 pb-8 mt-20">
       <div className="max-w-7xl mx-auto px-6 grid gap-12 md:grid-cols-4">
-
         {/* 🔹 Columna 1: Marca */}
         <div>
           <h3 className="text-2xl font-semibold caribbean-500 tracking-wide mb-3">
             AUNAR
           </h3>
           <p className="text-sand-300 text-sm leading-relaxed">
-            Complejo residencial y comercial pensado para elevar tu estilo de vida en Punta Cana.
+            Complejo residencial y comercial pensado para elevar tu estilo de
+            vida en Punta Cana.
           </p>
         </div>
 
@@ -20,19 +27,41 @@ export default function Footer() {
           <h4 className="text-lg font-semibold caribbean-500 mb-3">Explorar</h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="/villas" className="hover:text-caribbean-500 transition">Villas</a>
+              <a href="/villas" className="hover:text-caribbean-500 transition">
+                Villas
+              </a>
             </li>
             <li>
-              <a href="/double-villas" className="hover:text-caribbean-500 transition">Villas Dobles</a>
+              <a
+                href="/double-villas"
+                className="hover:text-caribbean-500 transition"
+              >
+                Villas Dobles
+              </a>
             </li>
             <li>
-              <a href="/apartments" className="hover:text-caribbean-500 transition">Apartamentos</a>
+              <a
+                href="/apartments"
+                className="hover:text-caribbean-500 transition"
+              >
+                Apartamentos
+              </a>
             </li>
             <li>
-              <a href="/commercial" className="hover:text-caribbean-500 transition">Locales</a>
+              <a
+                href="/commercial"
+                className="hover:text-caribbean-500 transition"
+              >
+                Locales
+              </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-caribbean-500 transition">Contacto</a>
+              <a
+                href="/contact"
+                className="hover:text-caribbean-500 transition"
+              >
+                Contacto
+              </a>
             </li>
           </ul>
         </div>
@@ -56,36 +85,66 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* 🔹 Columna 4: Redes sociales */}
-        <div>
-          <h4 className="text-lg font-semibold caribbean-500 mb-3">Síguenos</h4>
-          <div className="flex gap-4 mt-2">
-            <a
-              href="#"
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
-            >
-              <Facebook size={18} className="caribbean-500" />
-            </a>
-            <a
-              href="#"
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
-            >
-              <Instagram size={18} className="caribbean-500" />
-            </a>
-            <a
-              href="#"
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
-            >
-              <Youtube size={18} className="caribbean-500" />
-            </a>
-          </div>
+        {/* Redes sociales con cambio de icono */}
+        <div className="flex gap-6 items-center">
+          {/* Instagram */}
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative w-6 h-6 block"
+          >
+            <img
+              src="/icons/instagram-white.svg"
+              className="absolute inset-0 w-6 h-6 group-hover:opacity-0 transition-opacity duration-300"
+            />
+            <img
+              src="/icons/instagram-color.svg"
+              className="absolute inset-0 w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          </a>
+
+          {/* Facebook */}
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative w-7 h-7 block"
+          >
+            <img
+              src="/icons/facebook-white.svg"
+              className="absolute inset-0 w-7 h-7 group-hover:opacity-0 transition-opacity duration-300"
+            />
+            <img
+              src="/icons/facebook-blue.svg"
+              className="absolute inset-0 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          </a>
+
+          {/* TikTok */}
+          <a
+            href="https://tiktok.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative w-6 h-6 block"
+          >
+            <img
+              src="/icons/tiktok-white.svg"
+              className="absolute inset-0 w-6 h-6 group-hover:opacity-0 transition-opacity duration-300"
+            />
+            <img
+              src="/icons/tiktok-color.svg"
+              className="absolute inset-0 w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          </a>
         </div>
       </div>
 
       {/* Línea inferior */}
       <div className="mt-14 border-t border-white/10 pt-6 text-center text-sand-300 text-sm">
-        © {new Date().getFullYear()} <span className="caribbean-500">AUNAR</span>.  
-        Todos los derechos reservados.
+        © {new Date().getFullYear()}{" "}
+        <span className="caribbean-500">AUNAR</span>. Todos los derechos
+        reservados.
       </div>
     </footer>
   );
